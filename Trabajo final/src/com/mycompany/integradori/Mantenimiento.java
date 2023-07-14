@@ -3,18 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.integradori;
-
 /**
  *
  * @author barre
  */
 public class Mantenimiento extends javax.swing.JFrame {
-
+    
+    VistaMant time = new VistaMant();
+    
     /**
      * Creates new form Pesado
      */
     public Mantenimiento() {
         initComponents();
+        mostrarTiempo();
+    }
+    
+    public void mostrarTiempo(){
+        lblFecha.setText(time.fechacomp);
+        lblHora.setText(time.fechacomp);
+        
     }
 
     /**
@@ -44,12 +52,11 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        lblHora = new javax.swing.JLabel();
+        lblFecha = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
@@ -96,6 +103,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jTextField17 = new javax.swing.JTextField();
         jTextField18 = new javax.swing.JTextField();
         jTextField19 = new javax.swing.JTextField();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -302,15 +310,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel11.setText("Temperatura en Zonas");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setText("09:24 a.m.");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, -1, 26));
+        lblHora.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblHora.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 110, 26));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel13.setText("21/04/2023");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, -1, -1));
+        lblFecha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblFecha.setForeground(new java.awt.Color(187, 184, 193));
+        jPanel2.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, 110, 30));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(134, 83, 140));
@@ -327,17 +333,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel17.setText("Producto");
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
-        jTextField2.setBackground(new java.awt.Color(47, 44, 57));
-        jTextField2.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(255, 255, 255));
-        jTextField2.setBorder(null);
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 280, 30));
-
         jPanel5.setBackground(new java.awt.Color(47, 44, 57));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -346,10 +341,11 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("ACEPTAR");
         jLabel16.setToolTipText("");
-        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 20));
+        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, -1, 20));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 120, 40));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 550, 120, 40));
 
+        jLabel20.setBackground(new java.awt.Color(0, 255, 153));
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(187, 184, 193));
         jLabel20.setText("ATIQPLUS AMARILLO K11273/1");
@@ -596,14 +592,14 @@ public class Mantenimiento extends javax.swing.JFrame {
         });
         jPanel2.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, 50, 30));
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Juan Perez", "Luis Ordoñez", "Mario Garrala", "Pedro Dominguez", "Miguel Juarez", "Daniel Valencia" }));
+        jComboBox1.setToolTipText("");
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 142, 280, 30));
+
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 770, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
         Pesado yy=new Pesado();
@@ -700,11 +696,10 @@ public class Mantenimiento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -762,7 +757,6 @@ public class Mantenimiento extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
-    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
@@ -770,5 +764,7 @@ public class Mantenimiento extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JLabel lblFecha;
+    private javax.swing.JLabel lblHora;
     // End of variables declaration//GEN-END:variables
 }
