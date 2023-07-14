@@ -1,8 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.mycompany.integradori;
+
+import Controlador.condicionMantControlador;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
 /**
  *
  * @author barre
@@ -25,6 +26,10 @@ public class Mantenimiento extends javax.swing.JFrame {
         
     }
 
+    ImageIcon icon = new ImageIcon(getClass().getResource("/com/mycompany/imagen/Recurso 1 (Custom) (Custom).png"));
+    jLabel6.setIcon(icon);
+
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,11 +46,11 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel9 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         lblHora = new javax.swing.JLabel();
@@ -53,8 +58,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel16 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
@@ -100,6 +103,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jTextField18 = new javax.swing.JTextField();
         jTextField19 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
+        btncond = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -168,9 +172,6 @@ public class Mantenimiento extends javax.swing.JFrame {
 
         jPanel1.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 549, -1, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/logo1.png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
-
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(187, 184, 193));
         jLabel4.setText("Registro");
@@ -225,6 +226,9 @@ public class Mantenimiento extends javax.swing.JFrame {
 
         jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, -1, 37));
 
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/Recurso 1 (Custom) (Custom).png.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 600));
 
         jPanel2.setBackground(new java.awt.Color(26, 22, 31));
@@ -257,18 +261,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(187, 184, 193));
         jLabel17.setText("Producto");
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
-
-        jPanel5.setBackground(new java.awt.Color(47, 44, 57));
-        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setText("ACEPTAR");
-        jLabel16.setToolTipText("");
-        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 10, -1, 20));
-
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 550, 120, 40));
 
         jLabel20.setBackground(new java.awt.Color(0, 255, 153));
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
@@ -321,14 +313,17 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 230, -1, -1));
 
         jTextField1.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField1.setBorder(null);
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 90, 30));
 
         jTextField3.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField3.setBorder(null);
         jPanel2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 90, 30));
 
         jTextField4.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField4.setBorder(null);
         jTextField4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -338,14 +333,17 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 90, 30));
 
         jTextField5.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField5.setBorder(null);
         jPanel2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 90, 30));
 
         jTextField6.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField6.setBorder(null);
         jPanel2.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 90, 30));
 
         jTextField7.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField7.setBorder(null);
         jTextField7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -356,15 +354,23 @@ public class Mantenimiento extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Z1", "Z2", "Z3", "Z4", "Z5", "Z6", "Z7", "Z8", "Z9", "Z10", "Z11", "Z12"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 710, 60));
@@ -405,14 +411,17 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(295, 410, -1, -1));
 
         jTextField8.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField8.setBorder(null);
         jPanel2.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, 50, 30));
 
         jTextField9.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField9.setBorder(null);
         jPanel2.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 50, 30));
 
         jTextField10.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField10.setBorder(null);
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -422,14 +431,17 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 50, 30));
 
         jTextField11.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField11.setBorder(null);
         jPanel2.add(jTextField11, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 440, 50, 30));
 
         jTextField12.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField12.setBorder(null);
         jPanel2.add(jTextField12, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 50, 30));
 
         jTextField13.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField13.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField13.setBorder(null);
         jTextField13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -443,14 +455,14 @@ public class Mantenimiento extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6"
+                "Tolva RPM", "Tornillo RPM", "Presion", "Amperaje", "Vacio", "Rendimiento"
             }
         ) {
             Class[] types = new Class [] {
                 java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, true
+                false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -504,14 +516,17 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, -1, -1));
 
         jTextField14.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField14.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField14.setBorder(null);
         jPanel2.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 440, 50, 30));
 
         jTextField15.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField15.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField15.setBorder(null);
         jPanel2.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 50, 30));
 
         jTextField16.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField16.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField16.setBorder(null);
         jTextField16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -521,14 +536,17 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jTextField16, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 50, 30));
 
         jTextField17.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField17.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField17.setBorder(null);
         jPanel2.add(jTextField17, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 50, 30));
 
         jTextField18.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField18.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField18.setBorder(null);
         jPanel2.add(jTextField18, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, 50, 30));
 
         jTextField19.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField19.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField19.setBorder(null);
         jTextField19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -540,6 +558,15 @@ public class Mantenimiento extends javax.swing.JFrame {
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Juan Perez", "Luis Ordoñez", "Mario Garrala", "Pedro Dominguez", "Miguel Juarez", "Daniel Valencia" }));
         jComboBox1.setToolTipText("");
         jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 142, 280, 30));
+
+        btncond.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btncond.setText("Aceptar");
+        btncond.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncondActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btncond, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 550, 120, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 770, 600));
 
@@ -585,68 +612,32 @@ public class Mantenimiento extends javax.swing.JFrame {
         yy.setVisible(true);
     }//GEN-LAST:event_jLabel8MouseClicked
 
+    private void btncondActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncondActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncondActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Mantenimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Mantenimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Mantenimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Mantenimiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Mantenimiento().setVisible(true);
-            }
-        });
+        Mantenimiento mant = new Mantenimiento();
+        condicionMantControlador cmc = new condicionMantControlador(mant);
+        mant.setVisible(true);
+        mant.setLocationRelativeTo(mant);
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btncond;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     public javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     public javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     public javax.swing.JLabel jLabel21;
     public javax.swing.JLabel jLabel22;
@@ -670,18 +661,18 @@ public class Mantenimiento extends javax.swing.JFrame {
     public javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     public javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel9;
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JTable jTable2;
+    public javax.swing.JTable jTable1;
+    public static javax.swing.JTable jTable2;
     public javax.swing.JTextField jTextField1;
     public javax.swing.JTextField jTextField10;
     public javax.swing.JTextField jTextField11;
