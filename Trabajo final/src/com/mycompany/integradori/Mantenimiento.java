@@ -56,6 +56,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel14 = new javax.swing.JPanel();
         jLabel28 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -307,9 +308,9 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel16.setText("APLICAR");
         jLabel16.setToolTipText("");
-        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, 50));
+        jPanel5.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, -1, 50));
 
-        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, 200, 50));
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 520, 210, 50));
 
         jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 20)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(187, 184, 193));
@@ -342,8 +343,13 @@ public class Mantenimiento extends javax.swing.JFrame {
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel18.setText("Responsable");
-        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+        jLabel18.setText("Tolva RPM");
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(187, 184, 193));
+        jLabel19.setText("Responsable");
+        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 770, 600));
 
@@ -435,6 +441,7 @@ public class Mantenimiento extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel28;
