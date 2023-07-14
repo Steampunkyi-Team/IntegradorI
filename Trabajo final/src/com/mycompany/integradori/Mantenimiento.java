@@ -26,8 +26,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         
     }
 
-    ImageIcon icon = new ImageIcon(getClass().getResource("/com/mycompany/imagen/Recurso 1 (Custom) (Custom).png"));
-    jLabel6.setIcon(icon);
+    
 
     
     /**
@@ -43,7 +42,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
         jPanel11 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -104,6 +102,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jTextField19 = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
         btncond = new javax.swing.JButton();
+        btncond1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -140,11 +139,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         );
 
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 113, -1, 37));
-
-        jPanel6.setBackground(new java.awt.Color(37, 32, 47));
-        jPanel6.setPreferredSize(new java.awt.Dimension(226, 45));
-        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 428, -1, 37));
 
         jPanel11.setBackground(new java.awt.Color(37, 32, 47));
         jPanel11.setPreferredSize(new java.awt.Dimension(226, 45));
@@ -560,13 +554,22 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 142, 280, 30));
 
         btncond.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btncond.setText("Aceptar");
+        btncond.setText("Reporte");
         btncond.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncondActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 550, 120, 40));
+        jPanel2.add(btncond, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 550, 120, 40));
+
+        btncond1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        btncond1.setText("Aceptar");
+        btncond1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncond1ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btncond1, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 550, 120, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 770, 600));
 
@@ -616,6 +619,10 @@ public class Mantenimiento extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btncondActionPerformed
 
+    private void btncond1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncond1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -629,6 +636,7 @@ public class Mantenimiento extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btncond;
+    public javax.swing.JButton btncond1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -667,7 +675,6 @@ public class Mantenimiento extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel11;
     public javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel9;
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane2;
