@@ -5,15 +5,12 @@
 package com.mycompany.integradori;
 
 
-import java.awt.*;
+
 import javax.swing.*;
 
 public class Inicio extends javax.swing.JFrame {
-    private Component confirmation;
-    private String usuario,password;
     public Inicio() {
         initComponents();
-        setLocationRelativeTo(null);
         txtUsuario.setFocusable(true);
     }
 
@@ -194,7 +191,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void btnInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInicioActionPerformed
         String usuario = txtUsuario.getText();
-        String password = txtContra.getText();
+        String password = String.valueOf(txtContra.getPassword());
         if(usuario.equals("Gerente") && password.equals("1234")){
             Formulacion IngresoG = new Formulacion();
             IngresoG.setVisible(true);
@@ -207,6 +204,8 @@ public class Inicio extends javax.swing.JFrame {
         }
         else{
             JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto");
+            txtUsuario.setText("");
+            txtContra.setText("");
         }
     }//GEN-LAST:event_btnInicioActionPerformed
 
@@ -217,45 +216,7 @@ public class Inicio extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex)
-        {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-        {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                new Inicio().setVisible(true);
-            }
-        });
-    }
+    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel EnlaceContra;
