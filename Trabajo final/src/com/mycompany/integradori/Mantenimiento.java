@@ -2,6 +2,7 @@ package com.mycompany.integradori;
 
 import Modelo.condicionMant;
 import Modelo.condicionMantDAO;
+import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,7 +19,9 @@ public class Mantenimiento extends javax.swing.JFrame {
 
     
 void listar(){
+    @SuppressWarnings("unchecked")
     List<condicionMant> lista = dao.listar();
+    //List<? extends condicionMant> lista = new ArrayList<>(dao.listar());
     modelo = (DefaultTableModel)jTable2.getModel();
     Object[]ob = new Object[7];
     for (int i = 0; i < lista.size(); i++) {
@@ -254,11 +257,13 @@ void listar(){
         jPanel2.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 230, -1, -1));
 
         txtPresion.setBackground(new java.awt.Color(47, 44, 57));
+        txtPresion.setForeground(new java.awt.Color(204, 204, 204));
         txtPresion.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtPresion.setBorder(null);
         jPanel2.add(txtPresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 90, 30));
 
         txtTolvaRPM.setBackground(new java.awt.Color(47, 44, 57));
+        txtTolvaRPM.setForeground(new java.awt.Color(204, 204, 204));
         txtTolvaRPM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTolvaRPM.setBorder(null);
         txtTolvaRPM.addActionListener(new java.awt.event.ActionListener() {
@@ -269,6 +274,7 @@ void listar(){
         jPanel2.add(txtTolvaRPM, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 90, 30));
 
         txtTornilloRPM.setBackground(new java.awt.Color(47, 44, 57));
+        txtTornilloRPM.setForeground(new java.awt.Color(204, 204, 204));
         txtTornilloRPM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTornilloRPM.setBorder(null);
         txtTornilloRPM.addActionListener(new java.awt.event.ActionListener() {
@@ -279,16 +285,19 @@ void listar(){
         jPanel2.add(txtTornilloRPM, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 90, 30));
 
         txtRendimiento.setBackground(new java.awt.Color(47, 44, 57));
+        txtRendimiento.setForeground(new java.awt.Color(204, 204, 204));
         txtRendimiento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtRendimiento.setBorder(null);
         jPanel2.add(txtRendimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 90, 30));
 
         txtAmperaje.setBackground(new java.awt.Color(47, 44, 57));
+        txtAmperaje.setForeground(new java.awt.Color(204, 204, 204));
         txtAmperaje.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtAmperaje.setBorder(null);
         jPanel2.add(txtAmperaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 90, 30));
 
         txtVacio.setBackground(new java.awt.Color(47, 44, 57));
+        txtVacio.setForeground(new java.awt.Color(204, 204, 204));
         txtVacio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtVacio.setBorder(null);
         txtVacio.addActionListener(new java.awt.event.ActionListener() {
@@ -396,6 +405,8 @@ void listar(){
         });
         jPanel2.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 50, 30));
 
+        jTable2.setBackground(new java.awt.Color(153, 153, 153));
+        jTable2.setForeground(new java.awt.Color(255, 255, 255));
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -403,22 +414,7 @@ void listar(){
             new String [] {
                 "ID", "Tolva RPM", "Tornillo RPM", "Presion", "Amperaje", "Vacio", "Rendimiento"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane2.setViewportView(jTable2);
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 710, 50));
@@ -493,6 +489,7 @@ void listar(){
         });
         jPanel2.add(jTextField19, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, 50, 30));
 
+        jComboBox1.setBackground(new java.awt.Color(47, 44, 57));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar...", "Juan Perez", "Luis Ordoñez", "Mario Garrala", "Pedro Dominguez", "Miguel Juarez", "Daniel Valencia" }));
         jComboBox1.setToolTipText("");
         jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 142, 280, 30));
@@ -514,7 +511,13 @@ void listar(){
             }
         });
         jPanel2.add(btncond1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 310, 80, 40));
+
+        jTextField2.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField2.setBorder(null);
         jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 280, 30));
+
+        jTextField20.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField20.setBorder(null);
         jPanel2.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 280, 30));
 
         btncond2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
@@ -636,9 +639,9 @@ void listar(){
         String Amperaje = txtAmperaje.getText();
         String Vacio = txtVacio.getText();
         String Rendimiento = txtRendimiento.getText();
-        Object[] ob = new Object[5];
+        Object[] ob = new Object[6];
         ob[0] = TolvaRPM;
-        ob[1] = TornilloRPM;
+        ob[1] = TornilloRPM; 
         ob[2] = Presion;
         ob[3] = Amperaje;
         ob[4] = Vacio;
@@ -740,7 +743,7 @@ void listar(){
     public javax.swing.JScrollPane jScrollPane1;
     public javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JTable jTable1;
-    public static javax.swing.JTable jTable2;
+    public javax.swing.JTable jTable2;
     public javax.swing.JTextField jTextField10;
     public javax.swing.JTextField jTextField11;
     public javax.swing.JTextField jTextField12;
