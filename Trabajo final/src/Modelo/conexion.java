@@ -14,10 +14,10 @@ import java.sql.DriverManager;
  */
 public class conexion {
     Connection con;
+    String url="jdbc:mysql://localhost:3306/masterbash";
+    String user="root";
+    String pass="";
     public Connection getConnection(){
-        String url="jdbc:mysql://localhost:3306/masterbash";
-        String user="root";
-        String pass="";
         try{
             //Class.forName("com.mysql.jdbc.Driver");
             Class.forName("com.mysql.cj.jdbc.Driver");

@@ -2,7 +2,6 @@ package com.mycompany.integradori;
 
 import Modelo.condicionMant;
 import Modelo.condicionMantDAO;
-import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
@@ -18,24 +17,24 @@ public class Mantenimiento extends javax.swing.JFrame {
     }
 
     
-void listar(){
-    @SuppressWarnings("unchecked")
-    List<condicionMant> lista = dao.listar();
-    //List<? extends condicionMant> lista = new ArrayList<>(dao.listar());
-    modelo = (DefaultTableModel)jTable2.getModel();
-    Object[]ob = new Object[7];
-    for (int i = 0; i < lista.size(); i++) {
-        ob[0]=lista.get(i).getIdCondicionMant();
-        ob[1]=lista.get(i).getTolvaRPM();
-        ob[2]=lista.get(i).getTornilloRPM();
-        ob[3]=lista.get(i).getPresion();
-        ob[4]=lista.get(i).getAmperaje();
-        ob[5]=lista.get(i).getVacio();
-        ob[6]=lista.get(i).getRendimiento();
-        modelo.addRow(ob);
+    void listar(){
+        @SuppressWarnings("unchecked")
+        List<condicionMant> lista = dao.listar();
+        //List<? extends condicionMant> lista = new ArrayList<>(dao.listar());
+        modelo = (DefaultTableModel)jTable2.getModel();
+        Object[]ob = new Object[7];
+        for (int i = 0; i < lista.size(); i++) {
+            ob[0]=lista.get(i).getIdCondicionMant();
+            ob[1]=lista.get(i).getTolvaRPM();
+            ob[2]=lista.get(i).getTornilloRPM();
+            ob[3]=lista.get(i).getPresion();
+            ob[4]=lista.get(i).getAmperaje();
+            ob[5]=lista.get(i).getVacio();
+            ob[6]=lista.get(i).getRendimiento();
+            modelo.addRow(ob);
+        }
+        jTable2.setModel(modelo);
     }
-    jTable2.setModel(modelo);
-}
     
     /**
      * This method is called from within the constructor to initialize the form.
