@@ -67,7 +67,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl = new javax.swing.JTable();
-        jLabel9 = new javax.swing.JLabel();
         cantidad = new javax.swing.JSpinner();
         jScrollPane2 = new javax.swing.JScrollPane();
         of = new javax.swing.JTextArea();
@@ -77,6 +76,8 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        codigo1 = new javax.swing.JTextArea();
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -89,15 +90,19 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(26, 22, 31));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("REGISTRO");
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Nº OF");
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Producto");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Cantidad");
 
         tbl.setModel(new javax.swing.table.DefaultTableModel(
@@ -121,14 +126,12 @@ public class OrdenProduccion extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbl);
 
-        jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 28)); // NOI18N
-        jLabel9.setText("ATIQPLUS AMARILLO K11273/3");
-
         of.setColumns(20);
         of.setRows(5);
         jScrollPane2.setViewportView(of);
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Código");
 
         codigo.setColumns(20);
@@ -141,6 +144,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jScrollPane3.setViewportView(codigo);
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("09:24 A.M.");
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
@@ -153,6 +157,15 @@ public class OrdenProduccion extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+
+        codigo1.setColumns(20);
+        codigo1.setRows(5);
+        codigo1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                codigo1KeyPressed(evt);
+            }
+        });
+        jScrollPane4.setViewportView(codigo1);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -168,10 +181,10 @@ public class OrdenProduccion extends javax.swing.JFrame {
                             .addGap(32, 32, 32)
                             .addComponent(jLabel10)
                             .addGap(42, 42, 42)
-                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 223, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jScrollPane3))
+                                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel6)
                             .addGap(30, 30, 30)
@@ -210,9 +223,9 @@ public class OrdenProduccion extends javax.swing.JFrame {
                             .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addGap(30, 30, 30)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel9))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                         .addGap(39, 39, 39)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
@@ -228,9 +241,11 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/Recurso 1 (Custom) (Custom).png"))); // NOI18N
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("INICIO");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("REGISTRO");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -240,6 +255,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("FORMULA");
         jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -319,6 +335,10 @@ public class OrdenProduccion extends javax.swing.JFrame {
         yy.setVisible(true);
     }//GEN-LAST:event_jLabel4MouseClicked
 
+    private void codigo1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_codigo1KeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_codigo1KeyPressed
+
     /**
      * @param args the command line arguments
      */
@@ -365,6 +385,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JSpinner cantidad;
     private javax.swing.JTextArea codigo;
+    private javax.swing.JTextArea codigo1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -377,12 +398,12 @@ public class OrdenProduccion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea of;
     private javax.swing.JTable tbl;
     // End of variables declaration//GEN-END:variables

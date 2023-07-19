@@ -114,7 +114,7 @@ public class FormulaControlador implements ActionListener {
         f.setCantidad5(cantidad5);
          int r=  dao.agregar(f);
          if(r==1){
-             JOptionPane.showMessageDialog(vista,"Usuario Agregado");
+             JOptionPane.showMessageDialog(vista,"La formula se agregó correctamente");
          }else{
              JOptionPane.showMessageDialog(vista,"Error");
          }
@@ -149,7 +149,7 @@ public class FormulaControlador implements ActionListener {
         f.setCantidad5(cantidad5);
         int r=  dao.agregar(f);
          if(r==1){
-             JOptionPane.showMessageDialog(vista,"Usuario Modificado");
+             JOptionPane.showMessageDialog(vista,"La formula se modificó correctamente");
          }else{
              JOptionPane.showMessageDialog(vista,"Error");
          }
