@@ -92,8 +92,9 @@ public class Mantenimiento extends javax.swing.JFrame {
          int r=  dao.agregar(o);
          if(r==1){
              JOptionPane.showMessageDialog(this,"El datos se agregaron correctamente");
-            
+             limpiarTabla();
              listar();
+             
          }else{
              JOptionPane.showMessageDialog(this,"Error");
          }
@@ -127,9 +128,10 @@ public class Mantenimiento extends javax.swing.JFrame {
         
          int r=  d.agregar(a);
          if(r==1){
-             JOptionPane.showMessageDialog(this,"El datos se agregaron correctamente");
+             JOptionPane.showMessageDialog(this,"Los datos se agregaron correctamente");
+            limpiarTabla2();
+            listar2();
             
-             listar2();
          }else{
              JOptionPane.showMessageDialog(this,"Error");
          }
@@ -155,6 +157,18 @@ public class Mantenimiento extends javax.swing.JFrame {
         z10.setText(null);
         z11.setText(null);
         z12.setText(null);   
+    }
+     public void limpiarTabla(){
+        for(int i=0;i<jTable2.getRowCount();i++){
+            modelo.removeRow(i);
+            i=i-1;
+        }
+    }
+     public void limpiarTabla2(){
+        for(int i=0;i<jTable1.getRowCount();i++){
+            modelo.removeRow(i);
+            i=i-1;
+        }
     }
 
     /**
@@ -543,7 +557,15 @@ public class Mantenimiento extends javax.swing.JFrame {
             new String [] {
                 "ID", "Tolva RPM", "Tornillo RPM", "Presion", "Amperaje", "Vacio", "Rendimiento"
             }
-        ));
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class, java.lang.Double.class
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 710, 50));
@@ -599,7 +621,7 @@ public class Mantenimiento extends javax.swing.JFrame {
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class
+                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
             };
 
             public Class getColumnClass(int columnIndex) {
