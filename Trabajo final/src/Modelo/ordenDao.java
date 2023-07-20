@@ -37,16 +37,16 @@ public class ordenDao {
         return 1;
     }
     
-    public String obtenerNombrePorCodigo(int codigo) {
+    public String obtenerNombrePorNof(int nof) {
         String nombre = null;
-        String sql = "SELECT nof FROM orden WHERE idorden = ?"; // Reemplaza "tabla_nombre" con el nombre real de tu tabla y "codigo" con el nombre de la columna que contiene los códigos.
+        String sql = "SELECT f.producto FROM orden o JOIN Formula f ON o.idFormula = f.idFormula WHERE o.nof = ?"; // Reemplaza "tabla_nombre" con el nombre real de tu tabla y "codigo" con el nombre de la columna que contiene los códigos.
         try {
             con = conectar.getConnection();
             ps = con.prepareStatement(sql);
-            ps.setInt(1, codigo);
+            ps.setInt(1, nof);
             rs = ps.executeQuery();
             if (rs.next()) {
-                nombre = rs.getString("nof");
+                nombre = rs.getString("producto");
             }
         } catch (Exception e) {
             e.printStackTrace();

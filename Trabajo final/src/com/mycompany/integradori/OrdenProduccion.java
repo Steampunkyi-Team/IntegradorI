@@ -123,7 +123,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jPanel10 = new javax.swing.JPanel();
@@ -177,9 +176,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(37, 32, 47));
         jPanel1.setPreferredSize(new java.awt.Dimension(240, 600));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/Recurso 1 (Custom) (Custom).png"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 22, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(37, 32, 47));
         jPanel4.setPreferredSize(new java.awt.Dimension(226, 45));
@@ -731,7 +727,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

@@ -45,16 +45,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         
     }
     
-    private void txtCodigoFocusLost(java.awt.event.FocusEvent evt) {                                      
-        // Obtener el código ingresado por el usuario
-        int codigo = Integer.parseInt(txtCodigo.getText());
-
-        // Llamar al método para obtener el nombre
-        String nombre = dd.obtenerNombrePorCodigo(codigo);
-
-        // Mostrar el nombre en la caja de texto correspondiente
-        txtNombre.setText(nombre);
-    }
     
     void listar() {
         @SuppressWarnings("unchecked")
@@ -352,6 +342,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         txtNombre = new javax.swing.JTextField();
         txtCodigo = new javax.swing.JTextField();
+        btncond6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -618,13 +609,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(txtAmperaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 90, 30));
 
         btncond3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        btncond3.setText("Agregar");
+        btncond3.setText("Buscar");
         btncond3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncond3ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, 100, 40));
+        jPanel2.add(btncond3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 100, 30));
 
         btncond1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btncond1.setText("Actualizar");
@@ -832,6 +823,15 @@ public class Mantenimiento extends javax.swing.JFrame {
         txtCodigo.setBorder(null);
         jPanel2.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 280, 30));
 
+        btncond6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btncond6.setText("Agregar");
+        btncond6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btncond6ActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btncond6, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, 100, 40));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -884,8 +884,9 @@ public class Mantenimiento extends javax.swing.JFrame {
     }//GEN-LAST:event_txtVacioActionPerformed
 
     private void btncond3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond3ActionPerformed
-        agregar();
-        limpiar();
+        int nof = Integer.parseInt(txtCodigo.getText());
+        String nombreProducto = dd.obtenerNombrePorNof(nof);
+        txtNombre.setText(nombreProducto);
     }//GEN-LAST:event_btncond3ActionPerformed
 
     private void btncond1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond1ActionPerformed
@@ -985,6 +986,10 @@ public class Mantenimiento extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jTable1MouseClicked
 
+    private void btncond6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btncond6ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1030,6 +1035,7 @@ public class Mantenimiento extends javax.swing.JFrame {
     public javax.swing.JButton btncond3;
     public javax.swing.JButton btncond4;
     public javax.swing.JButton btncond5;
+    public javax.swing.JButton btncond6;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
