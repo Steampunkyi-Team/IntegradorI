@@ -608,7 +608,9 @@ public class Mantenimiento extends javax.swing.JFrame {
         txtAmperaje.setBorder(null);
         jPanel2.add(txtAmperaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 90, 30));
 
+        btncond3.setBackground(new java.awt.Color(153, 153, 153));
         btncond3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btncond3.setForeground(new java.awt.Color(51, 51, 51));
         btncond3.setText("Buscar");
         btncond3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -617,7 +619,9 @@ public class Mantenimiento extends javax.swing.JFrame {
         });
         jPanel2.add(btncond3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 60, 100, 30));
 
+        btncond1.setBackground(new java.awt.Color(153, 153, 153));
         btncond1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btncond1.setForeground(new java.awt.Color(51, 51, 51));
         btncond1.setText("Actualizar");
         btncond1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -651,7 +655,9 @@ public class Mantenimiento extends javax.swing.JFrame {
         txtRendimiento.setBorder(null);
         jPanel2.add(txtRendimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 90, 30));
 
+        btncond4.setBackground(new java.awt.Color(153, 153, 153));
         btncond4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btncond4.setForeground(new java.awt.Color(51, 51, 51));
         btncond4.setText("Agregar");
         btncond4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -660,7 +666,9 @@ public class Mantenimiento extends javax.swing.JFrame {
         });
         jPanel2.add(btncond4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 440, 100, 40));
 
+        btncond5.setBackground(new java.awt.Color(153, 153, 153));
         btncond5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btncond5.setForeground(new java.awt.Color(51, 51, 51));
         btncond5.setText("Actualizar");
         btncond5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -823,7 +831,9 @@ public class Mantenimiento extends javax.swing.JFrame {
         txtCodigo.setBorder(null);
         jPanel2.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 280, 30));
 
+        btncond6.setBackground(new java.awt.Color(153, 153, 153));
         btncond6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btncond6.setForeground(new java.awt.Color(51, 51, 51));
         btncond6.setText("Agregar");
         btncond6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
