@@ -2,17 +2,17 @@ package Modelo;
 
 public class condicionMant {
     int idCondicionMant;
-    int TolvaRPM;
-    int TornilloRPM;
-    int Presion;
-    int Amperaje;
-    int Vacio;
-    int Rendimiento;
+    double TolvaRPM;
+    double TornilloRPM;
+    double Presion;
+    double Amperaje;
+    double Vacio;
+    double Rendimiento;
 
     public condicionMant() {
     }
 
-    public condicionMant(int idCondicionMant, int TolvaRPM, int TornilloRPM, int Presion, int Amperaje, int Vacio, int Rendimiento) {
+    public condicionMant(int idCondicionMant, double TolvaRPM, double TornilloRPM, double Presion, double Amperaje, double Vacio, double Rendimiento) {
         this.idCondicionMant = idCondicionMant;
         this.TolvaRPM = TolvaRPM;
         this.TornilloRPM = TornilloRPM;
@@ -30,53 +30,56 @@ public class condicionMant {
         this.idCondicionMant = idCondicionMant;
     }
 
-    public int getTolvaRPM() {
+    public double getTolvaRPM() {
         return TolvaRPM;
     }
 
-    public void setTolvaRPM(int TolvaRPM) {
+    public void setTolvaRPM(double TolvaRPM) {
         this.TolvaRPM = TolvaRPM;
     }
 
-    public int getTornilloRPM() {
+    public double getTornilloRPM() {
         return TornilloRPM;
     }
 
-    public void setTornilloRPM(int TornilloRPM) {
+    public void setTornilloRPM(double TornilloRPM) {
         this.TornilloRPM = TornilloRPM;
     }
 
-    public int getPresion() {
+    public double getPresion() {
         return Presion;
     }
 
-    public void setPresion(int Presion) {
+    public void setPresion(double Presion) {
         this.Presion = Presion;
     }
 
-    public int getAmperaje() {
+    public double getAmperaje() {
         return Amperaje;
     }
 
-    public void setAmperaje(int Amperaje) {
+    public void setAmperaje(double Amperaje) {
         this.Amperaje = Amperaje;
     }
 
-    public int getVacio() {
+    public double getVacio() {
         return Vacio;
     }
 
-    public void setVacio(int Vacio) {
+    public void setVacio(double Vacio) {
         this.Vacio = Vacio;
     }
 
-    public int getRendimiento() {
+    public double getRendimiento() {
         return Rendimiento;
     }
 
-    public void setRendimiento(int Rendimiento) {
+    public void setRendimiento(double Rendimiento) {
         this.Rendimiento = Rendimiento;
     }
+    
+    
+
 
        
     
