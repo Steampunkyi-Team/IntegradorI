@@ -36,4 +36,31 @@ public class ordenDao {
         }
         return 1;
     }
+    
+    public String obtenerNombrePorCodigo(int codigo) {
+        String nombre = null;
+        String sql = "SELECT nof FROM orden WHERE idorden = ?"; // Reemplaza "tabla_nombre" con el nombre real de tu tabla y "codigo" con el nombre de la columna que contiene los códigos.
+        try {
+            con = conectar.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setInt(1, codigo);
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                nombre = rs.getString("nof");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Aquí puedes agregar cualquier manejo de excepciones que consideres necesario.
+        } finally {
+            // Asegurarse de cerrar los recursos adecuadamente
+            try {
+                if (rs != null) rs.close();
+                if (ps != null) ps.close();
+                if (con != null) con.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return nombre;
+    }
 }

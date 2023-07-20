@@ -2,8 +2,11 @@ package com.mycompany.integradori;
 
 import Modelo.condicionMant;
 import Modelo.condicionMantDAO;
+import Modelo.ordenDao;
 import Modelo.zona;
 import Modelo.zonaDao;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -16,6 +19,7 @@ public class Mantenimiento extends javax.swing.JFrame {
      */
     condicionMantDAO dao = new condicionMantDAO();
     condicionMant o = new condicionMant();
+    ordenDao dd = new ordenDao();
     zonaDao d=new zonaDao();
     zona a=new zona();
     DefaultTableModel modelo = new DefaultTableModel();
@@ -26,7 +30,32 @@ public class Mantenimiento extends javax.swing.JFrame {
         initComponents();
         listar();
         listar2();
+        
+        Thread hiloReloj = new Thread(() -> {
+        while (true) {
+            actualizarHoraYFecha();
+            try {
+                Thread.sleep(1000); // Actualizar cada segundo
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    });
+    hiloReloj.start();
+        
     }
+    
+    private void txtCodigoFocusLost(java.awt.event.FocusEvent evt) {                                      
+        // Obtener el código ingresado por el usuario
+        int codigo = Integer.parseInt(txtCodigo.getText());
+
+        // Llamar al método para obtener el nombre
+        String nombre = dd.obtenerNombrePorCodigo(codigo);
+
+        // Mostrar el nombre en la caja de texto correspondiente
+        txtNombre.setText(nombre);
+    }
+    
     void listar() {
         @SuppressWarnings("unchecked")
         List<condicionMant> lista = dao.listar();
@@ -234,8 +263,17 @@ public class Mantenimiento extends javax.swing.JFrame {
             model.removeRow(0);
         }
     }
-
-
+ 
+    private void actualizarHoraYFecha() {
+        SimpleDateFormat formatoHora = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+        Date horaActual = new Date();
+        lblHora.setText(formatoHora.format(horaActual));
+        lblFecha.setText(formatoFecha.format(horaActual));
+    }
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -307,13 +345,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         z4 = new javax.swing.JTextField();
         z3 = new javax.swing.JTextField();
         z2 = new javax.swing.JTextField();
+        z1 = new javax.swing.JTextField();
         txtTolvaRPM = new javax.swing.JTextField();
         txtTornilloRPM = new javax.swing.JTextField();
         txtPresion = new javax.swing.JTextField();
         jComboBox1 = new javax.swing.JComboBox<>();
-        jTextField21 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        z1 = new javax.swing.JTextField();
+        txtNombre = new javax.swing.JTextField();
+        txtCodigo = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -416,13 +454,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel11.setText("Temperatura en Zonas");
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, -1, -1));
 
-        lblHora.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblHora.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         lblHora.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel2.add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 20, 110, 26));
+        jPanel2.add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 150, 40));
 
-        lblFecha.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblFecha.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblFecha.setForeground(new java.awt.Color(187, 184, 193));
-        jPanel2.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 50, 110, 30));
+        jPanel2.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 140, 30));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(134, 83, 140));
@@ -431,12 +469,12 @@ public class Mantenimiento extends javax.swing.JFrame {
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel15.setText("N° OF");
+        jLabel15.setText("Producto");
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel17.setText("Producto");
+        jLabel17.setText("Nº OP");
         jPanel2.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
         jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -540,11 +578,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, -1, -1));
 
         z12.setBackground(new java.awt.Color(47, 44, 57));
+        z12.setForeground(new java.awt.Color(204, 204, 204));
         z12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z12.setBorder(null);
         jPanel2.add(z12, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 50, 30));
 
         z11.setBackground(new java.awt.Color(47, 44, 57));
+        z11.setForeground(new java.awt.Color(204, 204, 204));
         z11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z11.setBorder(null);
         z11.addActionListener(new java.awt.event.ActionListener() {
@@ -566,6 +606,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(txtVacio, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 90, 30));
 
         z7.setBackground(new java.awt.Color(47, 44, 57));
+        z7.setForeground(new java.awt.Color(204, 204, 204));
         z7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z7.setBorder(null);
         jPanel2.add(z7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 50, 30));
@@ -576,23 +617,23 @@ public class Mantenimiento extends javax.swing.JFrame {
         txtAmperaje.setBorder(null);
         jPanel2.add(txtAmperaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 90, 30));
 
-        btncond3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btncond3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btncond3.setText("Agregar");
         btncond3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncond3ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, 90, 40));
+        jPanel2.add(btncond3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, 100, 40));
 
-        btncond1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btncond1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btncond1.setText("Actualizar");
         btncond1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncond1ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 310, 90, 40));
+        jPanel2.add(btncond1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 310, 100, 40));
 
         jTable2.setBackground(new java.awt.Color(153, 153, 153));
         jTable2.setForeground(new java.awt.Color(255, 255, 255));
@@ -619,23 +660,23 @@ public class Mantenimiento extends javax.swing.JFrame {
         txtRendimiento.setBorder(null);
         jPanel2.add(txtRendimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 90, 30));
 
-        btncond4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btncond4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btncond4.setText("Agregar");
         btncond4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncond4ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 440, 90, 40));
+        jPanel2.add(btncond4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 440, 100, 40));
 
-        btncond5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        btncond5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btncond5.setText("Actualizar");
         btncond5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncond5ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond5, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, 90, 40));
+        jPanel2.add(btncond5, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, 100, 40));
 
         btncond2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btncond2.setText("Aceptar");
@@ -655,6 +696,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         });
         jPanel2.add(btncond, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 590, 120, 40));
 
+        jTable1.setBackground(new java.awt.Color(153, 153, 153));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -678,16 +720,19 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 50, 30));
 
         z10.setBackground(new java.awt.Color(47, 44, 57));
+        z10.setForeground(new java.awt.Color(204, 204, 204));
         z10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z10.setBorder(null);
         jPanel2.add(z10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, 50, 30));
 
         z9.setBackground(new java.awt.Color(47, 44, 57));
+        z9.setForeground(new java.awt.Color(204, 204, 204));
         z9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z9.setBorder(null);
         jPanel2.add(z9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 440, 50, 30));
 
         z8.setBackground(new java.awt.Color(47, 44, 57));
+        z8.setForeground(new java.awt.Color(204, 204, 204));
         z8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z8.setBorder(null);
         z8.addActionListener(new java.awt.event.ActionListener() {
@@ -698,11 +743,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(z8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 50, 30));
 
         z6.setBackground(new java.awt.Color(47, 44, 57));
+        z6.setForeground(new java.awt.Color(204, 204, 204));
         z6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z6.setBorder(null);
         jPanel2.add(z6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 440, 50, 30));
 
         z5.setBackground(new java.awt.Color(47, 44, 57));
+        z5.setForeground(new java.awt.Color(204, 204, 204));
         z5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z5.setBorder(null);
         z5.addActionListener(new java.awt.event.ActionListener() {
@@ -713,16 +760,19 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(z5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 50, 30));
 
         z4.setBackground(new java.awt.Color(47, 44, 57));
+        z4.setForeground(new java.awt.Color(204, 204, 204));
         z4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z4.setBorder(null);
         jPanel2.add(z4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 50, 30));
 
         z3.setBackground(new java.awt.Color(47, 44, 57));
+        z3.setForeground(new java.awt.Color(204, 204, 204));
         z3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z3.setBorder(null);
         jPanel2.add(z3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, 50, 30));
 
         z2.setBackground(new java.awt.Color(47, 44, 57));
+        z2.setForeground(new java.awt.Color(204, 204, 204));
         z2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z2.setBorder(null);
         z2.addActionListener(new java.awt.event.ActionListener() {
@@ -731,6 +781,12 @@ public class Mantenimiento extends javax.swing.JFrame {
             }
         });
         jPanel2.add(z2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 50, 30));
+
+        z1.setBackground(new java.awt.Color(47, 44, 57));
+        z1.setForeground(new java.awt.Color(204, 204, 204));
+        z1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        z1.setBorder(null);
+        jPanel2.add(z1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 50, 30));
 
         txtTolvaRPM.setBackground(new java.awt.Color(47, 44, 57));
         txtTolvaRPM.setForeground(new java.awt.Color(204, 204, 204));
@@ -765,18 +821,16 @@ public class Mantenimiento extends javax.swing.JFrame {
         jComboBox1.setToolTipText("");
         jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 142, 280, 30));
 
-        jTextField21.setBackground(new java.awt.Color(47, 44, 57));
-        jTextField21.setBorder(null);
-        jPanel2.add(jTextField21, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 280, 30));
+        txtNombre.setBackground(new java.awt.Color(47, 44, 57));
+        txtNombre.setForeground(new java.awt.Color(187, 184, 193));
+        txtNombre.setBorder(null);
+        txtNombre.setFocusable(false);
+        jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 280, 30));
 
-        jTextField2.setBackground(new java.awt.Color(47, 44, 57));
-        jTextField2.setBorder(null);
-        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 280, 30));
-
-        z1.setBackground(new java.awt.Color(47, 44, 57));
-        z1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        z1.setBorder(null);
-        jPanel2.add(z1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 50, 30));
+        txtCodigo.setBackground(new java.awt.Color(47, 44, 57));
+        txtCodigo.setForeground(new java.awt.Color(187, 184, 193));
+        txtCodigo.setBorder(null);
+        jPanel2.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 60, 280, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1016,12 +1070,12 @@ public class Mantenimiento extends javax.swing.JFrame {
     public javax.swing.JScrollPane jScrollPane2;
     public javax.swing.JTable jTable1;
     public javax.swing.JTable jTable2;
-    private javax.swing.JTextField jTextField2;
     public javax.swing.JTextField jTextField20;
-    private javax.swing.JTextField jTextField21;
     public javax.swing.JLabel lblFecha;
     public javax.swing.JLabel lblHora;
     public javax.swing.JTextField txtAmperaje;
+    private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtNombre;
     public javax.swing.JTextField txtPresion;
     public javax.swing.JTextField txtRendimiento;
     public javax.swing.JTextField txtTolvaRPM;
