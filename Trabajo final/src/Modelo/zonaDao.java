@@ -19,9 +19,10 @@ public class zonaDao {
     Connection con;
     PreparedStatement ps;
     ResultSet rs;
+    
     public List listar() {
         List<zona>datos=new ArrayList<>();
-        String sql="select*from zonas";
+        String sql="select*from zonas order by Idzonas desc limit 2";
         try {
             con=conectar.getConnection();
             ps=con.prepareStatement(sql);
@@ -67,6 +68,31 @@ public class zonaDao {
             ps.setDouble(12, o.getZ12());
             ps.executeUpdate();
         }catch(Exception e){
+            
+        }
+        return 1;
+    }
+    
+    public int actualizar(zona o) {
+        String sql = "update zona set z1=?, z2=?, z3=?, z4=?, z5=?, z6=?, z7=?, z8=?, z9=?, z10=?, z11=?, z12=? where idzonas=?";
+        try {
+            con=conectar.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.setDouble(1, o.getZ1());
+            ps.setDouble(2, o.getZ2());
+            ps.setDouble(3, o.getZ3());
+            ps.setDouble(4, o.getZ4());
+            ps.setDouble(5, o.getZ5());
+            ps.setDouble(6, o.getZ6());
+            ps.setDouble(7, o.getZ7());
+            ps.setDouble(8, o.getZ8());
+            ps.setDouble(9, o.getZ9());
+            ps.setDouble(10, o.getZ10());
+            ps.setDouble(11, o.getZ11());
+            ps.setDouble(12, o.getZ12());
+            ps.setInt(13, o.getIdzonas());
+            ps.executeUpdate();
+        } catch (Exception e) {
             
         }
         return 1;

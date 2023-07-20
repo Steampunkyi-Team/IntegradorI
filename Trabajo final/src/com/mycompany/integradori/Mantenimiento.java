@@ -8,15 +8,7 @@ import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 
-/**
- *
- * @author Usuario
- */
 public class Mantenimiento extends javax.swing.JFrame {
 
     /**
@@ -27,6 +19,9 @@ public class Mantenimiento extends javax.swing.JFrame {
     zonaDao d=new zonaDao();
     zona a=new zona();
     DefaultTableModel modelo = new DefaultTableModel();
+    private int idCondicionMant;
+    private int idZona;
+    
     public Mantenimiento() {
         initComponents();
         listar();
@@ -75,27 +70,27 @@ public class Mantenimiento extends javax.swing.JFrame {
         jTable1.setModel(modelo);
     }
     void agregar(){
-        double codigo=Double.parseDouble(txtTolvaRPM.getText());
-        double onf=Double.parseDouble(txtTornilloRPM.getText());
+        double TolvaRPM=Double.parseDouble(txtTolvaRPM.getText());
+        double TornilloRPM=Double.parseDouble(txtTornilloRPM.getText());
         double cantidad1=Double.parseDouble(txtPresion.getText());
         double cantidad2=Double.parseDouble(txtAmperaje.getText());
         double cantidad3=Double.parseDouble(txtVacio.getText());
         double cantidad4=Double.parseDouble(txtRendimiento.getText());
         
-        o.setTolvaRPM(codigo);
-        o.setTornilloRPM(onf);
+        o.setTolvaRPM(TolvaRPM);
+        o.setTornilloRPM(TornilloRPM);
         o.setPresion(cantidad1);
         o.setAmperaje(cantidad2);
         o.setVacio(cantidad3);
         o.setRendimiento(cantidad4);
         
-         int r=  dao.agregar(o);
+         int r =  dao.agregar(o);
          if(r==1){
-             JOptionPane.showMessageDialog(this,"El datos se agregaron correctamente");
-            
-             listar();
+            JOptionPane.showMessageDialog(this,"Los datos se agregaron correctamente");
+            limpiarTabla2();
+            listar();
          }else{
-             JOptionPane.showMessageDialog(this,"Error");
+            JOptionPane.showMessageDialog(this,"Error");
          }
     }
     void agregar2(){
@@ -105,12 +100,12 @@ public class Mantenimiento extends javax.swing.JFrame {
         double cantidad2=Double.parseDouble(z4.getText());
         double cantidad3=Double.parseDouble(z5.getText());
         double cantidad4=Double.parseDouble(z6.getText());
-        double cantidad0=Double.parseDouble(z7.getText());
-        double cantidad5=Double.parseDouble(z8.getText());
-        double cantidad6=Double.parseDouble(z9.getText());
-        double cantidad7=Double.parseDouble(z10.getText());
-        double cantidad8=Double.parseDouble(z11.getText());
-        double cantidad9=Double.parseDouble(z12.getText());
+        double cantidad5=Double.parseDouble(z7.getText());
+        double cantidad6=Double.parseDouble(z8.getText());
+        double cantidad7=Double.parseDouble(z9.getText());
+        double cantidad8=Double.parseDouble(z10.getText());
+        double cantidad9=Double.parseDouble(z11.getText());
+        double cantidad10=Double.parseDouble(z12.getText());
         
         a.setZ1(codigo);
         a.setZ2(onf);
@@ -118,20 +113,20 @@ public class Mantenimiento extends javax.swing.JFrame {
         a.setZ4(cantidad2);
         a.setZ5(cantidad3);
         a.setZ6(cantidad4);
-        a.setZ7(cantidad0);
-        a.setZ8(cantidad5);
-        a.setZ9(cantidad6);
-        a.setZ10(cantidad7);
-        a.setZ11(cantidad8);
-        a.setZ12(cantidad9);
+        a.setZ7(cantidad5);
+        a.setZ8(cantidad6);
+        a.setZ9(cantidad7);
+        a.setZ10(cantidad8);
+        a.setZ11(cantidad9);
+        a.setZ12(cantidad10);
         
          int r=  d.agregar(a);
          if(r==1){
-             JOptionPane.showMessageDialog(this,"El datos se agregaron correctamente");
-            
-             listar2();
+            JOptionPane.showMessageDialog(this,"El datos se agregaron correctamente");
+            limpiarTabla1();
+            listar2();
          }else{
-             JOptionPane.showMessageDialog(this,"Error");
+            JOptionPane.showMessageDialog(this,"Error");
          }
     }
     void limpiar(){
@@ -156,6 +151,90 @@ public class Mantenimiento extends javax.swing.JFrame {
         z11.setText(null);
         z12.setText(null);   
     }
+    
+    void actualizar() {
+        double TolvaRPM=Double.parseDouble(txtTolvaRPM.getText());
+        double TornilloRPM=Double.parseDouble(txtTornilloRPM.getText());
+        double cantidad1=Double.parseDouble(txtPresion.getText());
+        double cantidad2=Double.parseDouble(txtAmperaje.getText());
+        double cantidad3=Double.parseDouble(txtVacio.getText());
+        double cantidad4=Double.parseDouble(txtRendimiento.getText());
+        
+        condicionMant ou = new condicionMant();
+        ou.setIdCondicionMant(idCondicionMant);
+        ou.setTolvaRPM(TolvaRPM);
+        ou.setTornilloRPM(TornilloRPM);
+        ou.setPresion(cantidad1);
+        ou.setAmperaje(cantidad2);
+        ou.setVacio(cantidad3);
+        ou.setRendimiento(cantidad4);
+        
+
+        // Luego, llama al método para actualizar en la base de datos
+        int r = dao.actualizar(ou);
+        if (r == 1) {
+            JOptionPane.showMessageDialog(this, "Los datos se actualizaron correctamente");
+            limpiarTabla2();
+            listar();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al actualizar los datos");
+        }
+    }
+    
+    void actualizar2() {
+        double codigo1 = Double.parseDouble(z1.getText());
+        double onf1 = Double.parseDouble(z2.getText());
+        double cantidad1 = Double.parseDouble(z3.getText());
+        double cantidad2 = Double.parseDouble(z4.getText());
+        double cantidad3 = Double.parseDouble(z5.getText());
+        double cantidad4 = Double.parseDouble(z6.getText());
+        double cantidad5 = Double.parseDouble(z7.getText());
+        double cantidad6 = Double.parseDouble(z8.getText());
+        double cantidad7 = Double.parseDouble(z9.getText());
+        double cantidad8 = Double.parseDouble(z10.getText());
+        double cantidad9 = Double.parseDouble(z11.getText());
+        double cantidad10 = Double.parseDouble(z12.getText());
+
+        zona au = new zona();
+        au.setIdzonas(idZona);
+        au.setZ1(codigo1);
+        au.setZ2(onf1);
+        au.setZ3(cantidad1);
+        au.setZ4(cantidad2);
+        au.setZ5(cantidad3);
+        au.setZ6(cantidad4);
+        au.setZ7(cantidad5);
+        au.setZ8(cantidad6);
+        au.setZ9(cantidad7);
+        au.setZ10(cantidad8);
+        au.setZ11(cantidad9);
+        au.setZ12(cantidad10);
+
+        int r = d.actualizar(au);
+        if (r == 1) {
+            JOptionPane.showMessageDialog(this, "Los datos se actualizaron correctamente");
+            limpiarTabla1();
+            listar2();
+        } else {
+            JOptionPane.showMessageDialog(this, "Error al actualizar los datos");
+        }
+    }
+
+    
+    public void limpiarTabla1() {
+        DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
+        while (model.getRowCount() > 0) {
+            model.removeRow(0);
+        }
+    }
+
+    public void limpiarTabla2() {
+        DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
+        while (model.getRowCount() > 0) {
+            model.removeRow(0);
+        }
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -523,16 +602,16 @@ public class Mantenimiento extends javax.swing.JFrame {
                 btncond3ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, 80, 40));
+        jPanel2.add(btncond3, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, 90, 40));
 
         btncond1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btncond1.setText("Editar");
+        btncond1.setText("Actualizar");
         btncond1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncond1ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 310, 80, 40));
+        jPanel2.add(btncond1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 310, 90, 40));
 
         jTable2.setBackground(new java.awt.Color(153, 153, 153));
         jTable2.setForeground(new java.awt.Color(255, 255, 255));
@@ -544,9 +623,14 @@ public class Mantenimiento extends javax.swing.JFrame {
                 "ID", "Tolva RPM", "Tornillo RPM", "Presion", "Amperaje", "Vacio", "Rendimiento"
             }
         ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 710, 50));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 710, 60));
 
         txtRendimiento.setBackground(new java.awt.Color(47, 44, 57));
         txtRendimiento.setForeground(new java.awt.Color(204, 204, 204));
@@ -561,16 +645,16 @@ public class Mantenimiento extends javax.swing.JFrame {
                 btncond4ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 440, 80, 40));
+        jPanel2.add(btncond4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 440, 90, 40));
 
         btncond5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btncond5.setText("Editar");
+        btncond5.setText("Actualizar");
         btncond5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btncond5ActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond5, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, 80, 40));
+        jPanel2.add(btncond5, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, 90, 40));
 
         btncond2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btncond2.setText("Aceptar");
@@ -597,13 +681,10 @@ public class Mantenimiento extends javax.swing.JFrame {
             new String [] {
                 "ID", "Z1", "Z2", "Z3", "Z4", "Z5", "Z6", "Z7", "Z8", "Z9", "Z10", "Z11", "Z12"
             }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Integer.class
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+        ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
             }
         });
         jScrollPane1.setViewportView(jTable1);
@@ -773,7 +854,8 @@ public class Mantenimiento extends javax.swing.JFrame {
     }//GEN-LAST:event_btncond3ActionPerformed
 
     private void btncond1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond1ActionPerformed
-        
+        actualizar();
+        limpiar();
     }//GEN-LAST:event_btncond1ActionPerformed
 
     private void btncond4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond4ActionPerformed
@@ -782,7 +864,8 @@ public class Mantenimiento extends javax.swing.JFrame {
     }//GEN-LAST:event_btncond4ActionPerformed
 
     private void btncond5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond5ActionPerformed
-        // TODO add your handling code here:
+        actualizar2();
+        limpiar2();
     }//GEN-LAST:event_btncond5ActionPerformed
 
     private void btncond2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond2ActionPerformed
@@ -812,6 +895,60 @@ public class Mantenimiento extends javax.swing.JFrame {
     private void txtTornilloRPMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTornilloRPMActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTornilloRPMActionPerformed
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+        int fila = jTable2.getSelectedRow();
+        if(fila==-1){
+            JOptionPane.showMessageDialog(this,"Debe seleccionar una fila");
+        }else{
+            idCondicionMant = Integer.parseInt(jTable2.getValueAt(fila, 0).toString());
+            double TolvaRPM= (double)jTable2.getValueAt(fila, 1);
+            double TornilloRPM=(double)jTable2.getValueAt(fila, 2);
+            double cantidad1=(double)jTable2.getValueAt(fila, 3);
+            double cantidad2=(double)jTable2.getValueAt(fila, 4);
+            double cantidad3=(double)jTable2.getValueAt(fila, 5);
+            double cantidad4=(double)jTable2.getValueAt(fila, 6);
+            txtTolvaRPM.setText(String.valueOf(TolvaRPM));
+            txtTornilloRPM.setText(String.valueOf(TornilloRPM));
+            txtPresion.setText(String.valueOf(cantidad1));
+            txtAmperaje.setText(String.valueOf(cantidad2));
+            txtVacio.setText(String.valueOf(cantidad3));
+            txtRendimiento.setText(String.valueOf(cantidad4));
+        }
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        int fila = jTable1.getSelectedRow();
+        if(fila==-1){
+            JOptionPane.showMessageDialog(this,"Debe seleccionar una fila");
+        }else{
+            idZona = Integer.parseInt(jTable1.getValueAt(fila, 0).toString());
+            double codigo= (double)jTable1.getValueAt(fila, 1);
+            double onf=(double)jTable1.getValueAt(fila, 2);
+            double cantidad1=(double)jTable1.getValueAt(fila, 3);
+            double cantidad2=(double)jTable1.getValueAt(fila, 4);
+            double cantidad3=(double)jTable1.getValueAt(fila, 5);
+            double cantidad4=(double)jTable1.getValueAt(fila, 6);
+            double cantidad5=(double)jTable1.getValueAt(fila, 7);
+            double cantidad6=(double)jTable1.getValueAt(fila, 8);
+            double cantidad7=(double)jTable1.getValueAt(fila, 9);
+            double cantidad8=(double)jTable1.getValueAt(fila, 10);
+            double cantidad9=(double)jTable1.getValueAt(fila, 11);
+            double cantidad10=(double)jTable1.getValueAt(fila, 12);
+            z1.setText(String.valueOf(codigo));
+            z2.setText(String.valueOf(onf));
+            z3.setText(String.valueOf(cantidad1));
+            z4.setText(String.valueOf(cantidad2));
+            z5.setText(String.valueOf(cantidad3));
+            z6.setText(String.valueOf(cantidad4));
+            z7.setText(String.valueOf(cantidad5));
+            z8.setText(String.valueOf(cantidad6));
+            z9.setText(String.valueOf(cantidad7));
+            z10.setText(String.valueOf(cantidad8));
+            z11.setText(String.valueOf(cantidad9));
+            z12.setText(String.valueOf(cantidad10));
+        }
+    }//GEN-LAST:event_jTable1MouseClicked
 
     /**
      * @param args the command line arguments

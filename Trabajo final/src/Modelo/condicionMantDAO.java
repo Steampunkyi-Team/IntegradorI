@@ -3,22 +3,20 @@ package Modelo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class condicionMantDAO implements CRUD {
+public class condicionMantDAO {
+    conexion conectar = new conexion();
     Connection con;
-    conexion cn = new conexion();
     PreparedStatement ps;
     ResultSet rs;
     
-    @Override
     public List listar() {
-        List<condicionMant>lista=new ArrayList<>();
-        String sql="select*from condicionmant order by IdCondicionMant desc";
+        List<condicionMant>datos=new ArrayList<>();
+        String sql="select*from condicionmant order by IdCondicionMant desc limit 2";
         try {
-            con=cn.getConnection();
+            con=conectar.getConnection();
             ps=con.prepareStatement(sql);
             rs=ps.executeQuery();
             while(rs.next()) {
@@ -30,68 +28,50 @@ public class condicionMantDAO implements CRUD {
                 cm.setAmperaje(rs.getInt(5));
                 cm.setVacio(rs.getInt(6));
                 cm.setRendimiento(rs.getInt(7));
-                lista.add(cm);
+                datos.add(cm);
             }
-        }catch (SQLException e){
+        }catch (Exception e){
             
         }
-        return lista;
+        return datos;
     }
 
-    @Override
-    public int add(Object[] o) {
-        int r = 0;
-        String sql="insert into condicionmant(TolvaRPM,TornilloRPM, Presion, Amperaje, Vacio, Rendimiento) values(?,?,?,?,?,?,?)";
+    public int agregar(condicionMant o) {
+        String sql="insert into condicionmant(TolvaRPM,TornilloRPM, Presion, Amperaje, Vacio, Rendimiento) values(?,?,?,?,?,?)";
         try {
-            con = cn.getConnection();
-            ps = con.prepareStatement(sql);
-            ps.setObject(1, o[0]);
-            ps.setObject(2, o[1]);
-            ps.setObject(3, o[2]);
-            ps.setObject(4, o[3]);
-            ps.setObject(5, o[4]);
-            ps.setObject(6, o[5]);
-            r = ps.executeUpdate();
-        } catch (SQLException e) {
-            
-        }
-        return r;
-    }
-
-    @Override
-    public int actualizar(Object[] o) {
-        int r = 0;
-        String sql = "update condicionmant set TolvaRPM=?, TornilloRPM=?, Presion=?, Amperaje=?, Vacio=?, Rendimiento=? where IdCondicionMant=?";
-        try {
-            con = cn.getConnection();
-            ps=con.prepareStatement(sql);
-            ps.setObject(1, o[0]);
-            ps.setObject(2, o[1]);
-            ps.setObject(3, o[2]);
-            ps.setObject(4, o[3]);
-            ps.setObject(5, o[4]);
-            ps.setObject(6, o[5]);
-            r = ps.executeUpdate();
-        } catch (SQLException e) {
-            
-        }
-        return r;
-    }
-    public int agregar(condicionMant o){
-        String sql="insert into condicionMant(TolvaRPM,TornilloRPM,Presion,Amperaje,Vacio,Rendimiento) values(?,?,?,?,?,?)";
-        try{
             con=conectar.getConnection();
             ps=con.prepareStatement(sql);
-            ps.setDouble(1,o.getTolvaRPM());
+            ps.setDouble(1, o.getTolvaRPM());
             ps.setDouble(2, o.getTornilloRPM());
             ps.setDouble(3, o.getPresion());
             ps.setDouble(4, o.getAmperaje());
             ps.setDouble(5, o.getVacio());
             ps.setDouble(6, o.getRendimiento());
             ps.executeUpdate();
-        }catch(Exception e){
+        } catch (Exception e) {
+            
+        }
+        return 1;
+    }
+
+
+    public int actualizar(condicionMant o) {
+        String sql = "update condicionmant set TolvaRPM=?, TornilloRPM=?, Presion=?, Amperaje=?, Vacio=?, Rendimiento=? where IdCondicionMant=?";
+        try {
+            con=conectar.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.setDouble(1, o.getTolvaRPM());
+            ps.setDouble(2, o.getTornilloRPM());
+            ps.setDouble(3, o.getPresion());
+            ps.setDouble(4, o.getAmperaje());
+            ps.setDouble(5, o.getVacio());
+            ps.setDouble(6, o.getRendimiento());
+            ps.setInt(7, o.getIdCondicionMant());
+            ps.executeUpdate();
+        } catch (Exception e) {
             
         }
         return 1;
     }
 }
+
