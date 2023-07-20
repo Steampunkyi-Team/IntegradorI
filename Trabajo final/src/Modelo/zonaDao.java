@@ -74,7 +74,7 @@ public class zonaDao {
     }
     
     public int actualizar(zona o) {
-        String sql = "update zona set z1=?, z2=?, z3=?, z4=?, z5=?, z6=?, z7=?, z8=?, z9=?, z10=?, z11=?, z12=? where idzonas=?";
+        String sql = "update zonas set z1=?, z2=?, z3=?, z4=?, z5=?, z6=?, z7=?, z8=?, z9=?, z10=?, z11=?, z12=? where idzonas=?";
         try {
             con=conectar.getConnection();
             ps=con.prepareStatement(sql);
