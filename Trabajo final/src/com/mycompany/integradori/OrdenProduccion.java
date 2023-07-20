@@ -320,7 +320,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel6.setText("Nº OF");
+        jLabel6.setText("Nº OP");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -652,18 +652,15 @@ public class OrdenProduccion extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        Pesado yy=new Pesado();
-        yy.setVisible(true);
+        
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        Mezclado yy=new Mezclado();
-        yy.setVisible(true);
+        
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
-        Extrusion yy=new Extrusion();
-        yy.setVisible(true);
+        
     }//GEN-LAST:event_jLabel17MouseClicked
 
     /**

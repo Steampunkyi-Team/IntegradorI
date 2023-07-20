@@ -536,18 +536,15 @@ public class Formulacion extends javax.swing.JFrame {
     }//GEN-LAST:event_cantidad2txtActionPerformed
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        Pesado yy=new Pesado();
-        yy.setVisible(true);
+        
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        Mezclado yy=new Mezclado();
-        yy.setVisible(true);
+        
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
-        Extrusion yy=new Extrusion();
-        yy.setVisible(true);
+        
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
