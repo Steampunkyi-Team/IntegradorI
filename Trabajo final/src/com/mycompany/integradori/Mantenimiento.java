@@ -349,6 +349,11 @@ public class Mantenimiento extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(37, 32, 47));
         jPanel4.setPreferredSize(new java.awt.Dimension(226, 45));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(187, 184, 193));
@@ -993,6 +998,11 @@ public class Mantenimiento extends javax.swing.JFrame {
     private void btncond6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond6ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btncond6ActionPerformed
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+       PantallaInicio t=new PantallaInicio();
+        t.setVisible(true);
+    }//GEN-LAST:event_jPanel4MouseClicked
 
     /**
      * @param args the command line arguments

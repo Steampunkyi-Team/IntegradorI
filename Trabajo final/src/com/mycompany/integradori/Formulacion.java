@@ -387,6 +387,11 @@ public class Formulacion extends javax.swing.JFrame {
         jPanel10.setBackground(new java.awt.Color(37, 32, 47));
         jPanel10.setForeground(new java.awt.Color(187, 184, 193));
         jPanel10.setPreferredSize(new java.awt.Dimension(226, 45));
+        jPanel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel10MouseClicked(evt);
+            }
+        });
 
         jLabel16.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(187, 184, 193));
@@ -450,6 +455,11 @@ public class Formulacion extends javax.swing.JFrame {
 
         jPanel8.setBackground(new java.awt.Color(37, 32, 47));
         jPanel8.setPreferredSize(new java.awt.Dimension(226, 45));
+        jPanel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel8MouseClicked(evt);
+            }
+        });
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(187, 184, 193));
@@ -482,6 +492,11 @@ public class Formulacion extends javax.swing.JFrame {
 
         jPanel4.setBackground(new java.awt.Color(37, 32, 47));
         jPanel4.setPreferredSize(new java.awt.Dimension(226, 45));
+        jPanel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel4MouseClicked(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(187, 184, 193));
@@ -579,6 +594,21 @@ public class Formulacion extends javax.swing.JFrame {
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
+        PantallaInicio yy=new PantallaInicio();
+        yy.setVisible(true);
+    }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
+        OrdenProduccion yy=new OrdenProduccion();
+        yy.setVisible(true);
+    }//GEN-LAST:event_jPanel8MouseClicked
+
+    private void jPanel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MouseClicked
+        Mantenimiento yy=new Mantenimiento();
+        yy.setVisible(true);
+    }//GEN-LAST:event_jPanel10MouseClicked
 
     /**
      * @param args the command line arguments
