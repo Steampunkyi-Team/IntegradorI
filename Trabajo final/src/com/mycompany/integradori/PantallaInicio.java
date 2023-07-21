@@ -5,6 +5,13 @@
 package com.mycompany.integradori;
 
 import Controlador.FormulaControlador;
+import Modelo.conexion;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -17,7 +24,36 @@ public class PantallaInicio extends javax.swing.JFrame {
      */
     public PantallaInicio() {
         initComponents();
+        mostrar("orden");
         this.setLocationRelativeTo(null);
+    }
+    public void mostrar(String tabla){
+        String sql="select*from "+tabla;
+        Statement st;
+        conexion con=new conexion();
+        Connection conexion=con.getConnection();
+        System.out.println(sql);
+        DefaultTableModel model=new DefaultTableModel();
+        model.addColumn("id");
+        model.addColumn("idFormula");
+        model.addColumn("NOF");
+        model.addColumn("cantidad");
+
+        tbl.setModel(model);
+        String [] datos=new String[4];
+        try{
+            st =conexion.createStatement();
+            ResultSet rs= st.executeQuery(sql);
+            while(rs.next()){
+                datos[0]=rs.getString(1);
+                datos[1]=rs.getString(2);
+                datos[2]=rs.getString(3);
+                datos[3]=rs.getString(9);
+                model.addRow(datos);
+            }
+        }catch(SQLException e){
+            JOptionPane.showMessageDialog(null,"error"+e.toString());
+        }
     }
 
     /**
@@ -53,8 +89,10 @@ public class PantallaInicio extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
+        txtMostrarOrden = new javax.swing.JLabel();
+        txtMostrarNombre = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tbl = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -122,6 +160,11 @@ public class PantallaInicio extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(187, 184, 193));
         jLabel10.setText("Atrás");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 610, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 660));
@@ -157,8 +200,8 @@ public class PantallaInicio extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel11.setText("Buscar OP");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, 20));
+        jLabel11.setText("Nueva Formula");
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 20));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/edit.png"))); // NOI18N
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -202,21 +245,33 @@ public class PantallaInicio extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel17.setText("Producto Actual");
-        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+        jLabel17.setText("Nº de Id");
+        jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 80, -1));
 
         jLabel18.setForeground(new java.awt.Color(187, 184, 193));
         jLabel18.setText("Aquí va el número de la orden de prod.");
         jPanel6.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
 
         jLabel19.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel19.setText("Aquí va el nombre del producto");
-        jPanel6.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, -1, -1));
+        jLabel19.setText("Aquí va id del Producto");
+        jPanel6.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
+
+        txtMostrarOrden.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        txtMostrarOrden.setForeground(new java.awt.Color(255, 255, 255));
+        txtMostrarOrden.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        txtMostrarOrden.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel6.add(txtMostrarOrden, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 170, 30));
+
+        txtMostrarNombre.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        txtMostrarNombre.setForeground(new java.awt.Color(255, 255, 255));
+        txtMostrarNombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel6.add(txtMostrarNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 200, 40));
 
         jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 110, 230, 370));
 
-        jTable1.setBackground(new java.awt.Color(31, 30, 36));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tbl.setBackground(new java.awt.Color(31, 30, 36));
+        tbl.setForeground(new java.awt.Color(255, 255, 255));
+        tbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -227,7 +282,12 @@ public class PantallaInicio extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        tbl.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tbl);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 830, 140));
 
@@ -269,7 +329,9 @@ public class PantallaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        // TODO add your handling code here:
+        Formulacion e=new Formulacion();
+        e.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
@@ -277,6 +339,35 @@ public class PantallaInicio extends javax.swing.JFrame {
         yy.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jLabel12MouseClicked
+
+    private void tblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMouseClicked
+        Formulacion t=new Formulacion();
+        int f=t.tbl.getSelectedRow();
+        int a=0;
+        int fila = tbl.getSelectedRow();
+        if(fila==-1){
+            JOptionPane.showMessageDialog(this,"Debe seleccionar una fila");
+        }else{
+            int i = Integer.parseInt(tbl.getValueAt(fila, 2).toString());
+            txtMostrarOrden.setText(String.valueOf(i));
+            a = Integer.parseInt(tbl.getValueAt(fila, 1).toString());
+            
+            txtMostrarNombre.setText(String.valueOf(a));
+        }
+        
+        /*if(a==0){
+                
+            }else{
+                String b= (String) t.tbl.getValueAt(f, 2);
+                txtMostrarNombre.setText(b);
+            }*/
+    }//GEN-LAST:event_tblMouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        Inicio e=new Inicio();
+        e.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -355,6 +446,8 @@ public class PantallaInicio extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JTable tbl;
+    public javax.swing.JLabel txtMostrarNombre;
+    private javax.swing.JLabel txtMostrarOrden;
     // End of variables declaration//GEN-END:variables
 }
