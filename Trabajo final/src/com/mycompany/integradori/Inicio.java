@@ -18,6 +18,7 @@ public class Inicio extends javax.swing.JFrame {
     public Inicio() {
         initComponents();
         txtUsuario.setFocusable(true);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -37,6 +38,7 @@ public class Inicio extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));

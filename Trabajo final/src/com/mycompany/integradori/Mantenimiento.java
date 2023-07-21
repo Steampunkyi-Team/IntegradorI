@@ -28,6 +28,7 @@ public class Mantenimiento extends javax.swing.JFrame {
     
     public Mantenimiento() {
         initComponents();
+        this.setLocationRelativeTo(null);
         listar();
         listar2();
         
@@ -343,6 +344,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         btncond6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(37, 32, 47));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -358,6 +360,11 @@ public class Mantenimiento extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(187, 184, 193));
         jLabel3.setText("Inicio");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -872,16 +879,19 @@ public class Mantenimiento extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         OrdenProduccion yy=new OrdenProduccion();
         yy.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         Formulacion yy=new Formulacion();
         yy.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         Mantenimiento yy=new Mantenimiento();
         yy.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void z11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_z11ActionPerformed
@@ -1002,7 +1012,14 @@ public class Mantenimiento extends javax.swing.JFrame {
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
        PantallaInicio t=new PantallaInicio();
         t.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanel4MouseClicked
+
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+       PantallaInicio t=new PantallaInicio();
+        t.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jLabel3MouseClicked
 
     /**
      * @param args the command line arguments

@@ -5,6 +5,8 @@
  */
 package pkg2;
 
+import com.mycompany.integradori.Inicio;
+
 /**
  *
  * @author Usuario
@@ -16,7 +18,9 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println(">HOL");
+        Inicio login = new Inicio();
+        login.setVisible(true);
+        login.setLocationRelativeTo(null);
     }
     
 }

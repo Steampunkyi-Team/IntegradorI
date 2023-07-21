@@ -31,6 +31,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
     ordenDao dao=new ordenDao();
     public OrdenProduccion() {
         initComponents();
+        this.setLocationRelativeTo(null);
         mostrar2("formula");
         mostrar("orden");
         Thread hiloReloj = new Thread(() -> {
@@ -157,7 +158,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         cantidad = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         insumo5txt = new javax.swing.JTextField();
         insumo1txt = new javax.swing.JTextField();
         insumo2txt = new javax.swing.JTextField();
@@ -196,6 +196,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
         lblHora = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(37, 32, 47));
@@ -371,10 +372,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(187, 184, 193));
         jLabel10.setText("Código");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 37));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel12.setText("08/07/2023");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 50, -1, -1));
 
         insumo5txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo5txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -728,7 +725,9 @@ public class OrdenProduccion extends javax.swing.JFrame {
     }//GEN-LAST:event_productotxtActionPerformed
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        // TODO add your handling code here:
+        PantallaInicio t=new PantallaInicio();
+        t.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
@@ -736,26 +735,34 @@ public class OrdenProduccion extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        Formulacion t=new Formulacion();
         
+        t.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
-        
+        Mantenimiento t=new Mantenimiento();
+        t.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         PantallaInicio t=new PantallaInicio();
         t.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
         Formulacion t=new Formulacion();
         t.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanel7MouseClicked
 
     private void jPanel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MouseClicked
         Mantenimiento t=new Mantenimiento();
         t.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanel10MouseClicked
 
     /**
@@ -820,7 +827,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
     public javax.swing.JTextField insumo5txt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;

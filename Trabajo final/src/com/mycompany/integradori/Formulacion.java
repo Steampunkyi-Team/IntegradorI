@@ -29,6 +29,7 @@ public class Formulacion extends javax.swing.JFrame {
      */
     public Formulacion() {
         initComponents();
+        this.setLocationRelativeTo(null);
         mostrar("formula");
         Thread hiloReloj = new Thread(() -> {
         while (true) {
@@ -141,6 +142,7 @@ public class Formulacion extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(26, 22, 31));
@@ -580,7 +582,9 @@ public class Formulacion extends javax.swing.JFrame {
     }//GEN-LAST:event_cantidad2txtActionPerformed
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        
+        Mantenimiento yy=new Mantenimiento();
+        yy.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
@@ -588,26 +592,35 @@ public class Formulacion extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
-        
+        OrdenProduccion yy=new OrdenProduccion();
+        yy.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        // TODO add your handling code here:
+        PantallaInicio yy=new PantallaInicio();
+        yy.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         PantallaInicio yy=new PantallaInicio();
         yy.setVisible(true);
+        this.setVisible(false);
+        
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
         OrdenProduccion yy=new OrdenProduccion();
         yy.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanel8MouseClicked
 
     private void jPanel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MouseClicked
         Mantenimiento yy=new Mantenimiento();
         yy.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jPanel10MouseClicked
 
     /**
