@@ -169,6 +169,10 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -343,95 +347,111 @@ public class OrdenProduccion extends javax.swing.JFrame {
 
         insumo5txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo5txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo5txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo5txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo5txt.setBorder(null);
         jPanel2.add(insumo5txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 510, 150, 30));
 
         insumo1txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo1txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo1txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo1txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo1txt.setBorder(null);
         jPanel2.add(insumo1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 150, 30));
 
         insumo2txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo2txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo2txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo2txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo2txt.setBorder(null);
         jPanel2.add(insumo2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 150, 30));
 
         insumo3txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo3txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo3txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo3txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo3txt.setBorder(null);
         jPanel2.add(insumo3txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 410, 150, 30));
 
         insumo4txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo4txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo4txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo4txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo4txt.setBorder(null);
         jPanel2.add(insumo4txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 150, 30));
 
         cantidad5txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad5txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad5txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad5txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad5txt.setBorder(null);
         jPanel2.add(cantidad5txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 510, 70, 30));
 
         cantidad4txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad4txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad4txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad4txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad4txt.setBorder(null);
         jPanel2.add(cantidad4txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 460, 70, 30));
 
         cantidad3txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad3txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad3txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad3txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad3txt.setBorder(null);
         jPanel2.add(cantidad3txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 410, 70, 30));
 
         cantidad2txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad2txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad2txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad2txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad2txt.setBorder(null);
         jPanel2.add(cantidad2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 70, 30));
 
         cantidad1txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad1txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad1txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad1txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad1txt.setBorder(null);
         jPanel2.add(cantidad1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 70, 30));
 
         total5txt.setBackground(new java.awt.Color(45, 43, 57));
         total5txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        total5txt.setForeground(new java.awt.Color(255, 255, 255));
         total5txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         total5txt.setBorder(null);
         jPanel2.add(total5txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 510, 80, 30));
 
         total4txt.setBackground(new java.awt.Color(45, 43, 57));
         total4txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        total4txt.setForeground(new java.awt.Color(255, 255, 255));
         total4txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         total4txt.setBorder(null);
         jPanel2.add(total4txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 460, 80, 30));
 
         total3txt.setBackground(new java.awt.Color(45, 43, 57));
         total3txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        total3txt.setForeground(new java.awt.Color(255, 255, 255));
         total3txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         total3txt.setBorder(null);
         jPanel2.add(total3txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 80, 30));
 
         total2txt.setBackground(new java.awt.Color(45, 43, 57));
         total2txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        total2txt.setForeground(new java.awt.Color(255, 255, 255));
         total2txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         total2txt.setBorder(null);
         jPanel2.add(total2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 360, 80, 30));
 
         total1txt.setBackground(new java.awt.Color(45, 43, 57));
         total1txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        total1txt.setForeground(new java.awt.Color(255, 255, 255));
         total1txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         total1txt.setBorder(null);
         jPanel2.add(total1txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, 80, 30));
 
         tbl2.setBackground(new java.awt.Color(45, 43, 57));
+        tbl2.setForeground(new java.awt.Color(255, 255, 255));
         tbl2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {},
@@ -445,10 +465,11 @@ public class OrdenProduccion extends javax.swing.JFrame {
         ));
         jScrollPane5.setViewportView(tbl2);
 
-        jPanel2.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 330, 430, 208));
+        jPanel2.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 388, 430, 150));
 
         tbl.setBackground(new java.awt.Color(45, 43, 57));
         tbl.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        tbl.setForeground(new java.awt.Color(255, 255, 255));
         tbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -459,14 +480,16 @@ public class OrdenProduccion extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tbl);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 430, 110));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 430, 140));
 
         idtxt.setBackground(new java.awt.Color(45, 43, 57));
+        idtxt.setForeground(new java.awt.Color(255, 255, 255));
         idtxt.setBorder(null);
         jPanel2.add(idtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, -1, 30));
 
         productotxt.setBackground(new java.awt.Color(45, 43, 57));
         productotxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        productotxt.setForeground(new java.awt.Color(255, 255, 255));
         productotxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         productotxt.setBorder(null);
         productotxt.addActionListener(new java.awt.event.ActionListener() {
@@ -478,6 +501,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
 
         codigotxt.setBackground(new java.awt.Color(45, 43, 57));
         codigotxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        codigotxt.setForeground(new java.awt.Color(255, 255, 255));
         codigotxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         codigotxt.setBorder(null);
         jPanel2.add(codigotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 80, 250, 32));
@@ -507,6 +531,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jPanel2.add(calcularbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 180, 120, 40));
 
         noftxt.setBackground(new java.awt.Color(45, 43, 57));
+        noftxt.setForeground(new java.awt.Color(255, 255, 255));
         noftxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         noftxt.setBorder(null);
         jPanel2.add(noftxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 310, 32));
@@ -545,6 +570,26 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("Kg");
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 70, -1));
+
+        jLabel18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(187, 184, 193));
+        jLabel18.setText("Cantidad");
+        jPanel2.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(187, 184, 193));
+        jLabel19.setText("Cantidad");
+        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+
+        jLabel20.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(187, 184, 193));
+        jLabel20.setText("Cantidad");
+        jPanel2.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(187, 184, 193));
+        jLabel1.setText("Datos de Formula");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 160, 30));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 900, 650));
 
@@ -719,6 +764,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
     public javax.swing.JTextField insumo3txt;
     public javax.swing.JTextField insumo4txt;
     public javax.swing.JTextField insumo5txt;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -727,6 +773,9 @@ public class OrdenProduccion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

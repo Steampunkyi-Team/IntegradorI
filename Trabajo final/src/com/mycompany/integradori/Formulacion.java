@@ -138,6 +138,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         tbl.setBackground(new java.awt.Color(45, 43, 57));
         tbl.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        tbl.setForeground(new java.awt.Color(255, 255, 255));
         tbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -185,6 +186,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         codigotxt.setBackground(new java.awt.Color(45, 43, 57));
         codigotxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        codigotxt.setForeground(new java.awt.Color(255, 255, 255));
         codigotxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         codigotxt.setBorder(null);
         jPanel2.add(codigotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, 389, 33));
@@ -210,6 +212,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         insumo1txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo1txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo1txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo1txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo1txt.setBorder(null);
         insumo1txt.addActionListener(new java.awt.event.ActionListener() {
@@ -221,24 +224,28 @@ public class Formulacion extends javax.swing.JFrame {
 
         insumo2txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo2txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo2txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo2txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo2txt.setBorder(null);
         jPanel2.add(insumo2txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, 170, 27));
 
         insumo3txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo3txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo3txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo3txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo3txt.setBorder(null);
         jPanel2.add(insumo3txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, 170, 27));
 
         insumo4txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo4txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo4txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo4txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo4txt.setBorder(null);
         jPanel2.add(insumo4txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 170, 27));
 
         insumo5txt.setBackground(new java.awt.Color(45, 43, 57));
         insumo5txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        insumo5txt.setForeground(new java.awt.Color(255, 255, 255));
         insumo5txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         insumo5txt.setBorder(null);
         jPanel2.add(insumo5txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, 170, 29));
@@ -250,6 +257,8 @@ public class Formulacion extends javax.swing.JFrame {
         jPanel2.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 170, -1));
 
         cantidad1txt.setBackground(new java.awt.Color(45, 43, 57));
+        cantidad1txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad1txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad1txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad1txt.setBorder(null);
         cantidad1txt.addActionListener(new java.awt.event.ActionListener() {
@@ -261,6 +270,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         cantidad2txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad2txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad2txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad2txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad2txt.setBorder(null);
         cantidad2txt.addActionListener(new java.awt.event.ActionListener() {
@@ -272,6 +282,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         cantidad3txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad3txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad3txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad3txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad3txt.setBorder(null);
         cantidad3txt.addActionListener(new java.awt.event.ActionListener() {
@@ -283,12 +294,14 @@ public class Formulacion extends javax.swing.JFrame {
 
         cantidad4txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad4txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad4txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad4txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad4txt.setBorder(null);
         jPanel2.add(cantidad4txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, 70, 30));
 
         cantidad5txt.setBackground(new java.awt.Color(45, 43, 57));
         cantidad5txt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad5txt.setForeground(new java.awt.Color(255, 255, 255));
         cantidad5txt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         cantidad5txt.setBorder(null);
         jPanel2.add(cantidad5txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, 70, 30));
@@ -321,6 +334,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         productotxt.setBackground(new java.awt.Color(45, 43, 57));
         productotxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        productotxt.setForeground(new java.awt.Color(255, 255, 255));
         productotxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         productotxt.setBorder(null);
         jPanel2.add(productotxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 130, 389, 38));
@@ -328,6 +342,7 @@ public class Formulacion extends javax.swing.JFrame {
         idtxt.setEditable(false);
         idtxt.setBackground(new java.awt.Color(45, 43, 57));
         idtxt.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        idtxt.setForeground(new java.awt.Color(255, 255, 255));
         idtxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         idtxt.setBorder(null);
         jPanel2.add(idtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 50, 50, 30));
