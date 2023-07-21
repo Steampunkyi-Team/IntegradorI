@@ -85,14 +85,14 @@ public class Inicio extends javax.swing.JFrame {
             //IngresoG = Ingreso del gerente
             this.dispose();
             
-        }else if(usuario.equals("Operario") && password.equals("4321")){
+        }/*else if(usuario.equals("Operario") && password.equals("4321")){
             
             Mantenimiento IngresoO = new Mantenimiento();
             IngresoO.setVisible(true);
             //IngresoO = Ingreso del operario 
             this.dispose();
             
-        }
+        }*/
         else{
             JOptionPane.showMessageDialog(null, "Usuario o contraseña incorrecto");
             txtUsuario.setText("");

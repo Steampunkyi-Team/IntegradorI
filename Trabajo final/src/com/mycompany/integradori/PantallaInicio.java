@@ -126,7 +126,7 @@ public class PantallaInicio extends javax.swing.JFrame {
         jPanel1.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, -1, 30));
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/Recurso 1 (Custom).png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/Recurso 1 (Custom) (Custom).png.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
@@ -303,15 +303,21 @@ public class PantallaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void btnMantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMantActionPerformed
-        JOptionPane.showMessageDialog(null, "Hola");
+        Mantenimiento Man = new Mantenimiento();
+        Man.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnMantActionPerformed
 
     private void btnBuscarOPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarOPActionPerformed
-        JOptionPane.showMessageDialog(null, "Hola");
+        Formulacion For = new Formulacion();
+        For.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnBuscarOPActionPerformed
 
     private void btnNuevaOPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaOPActionPerformed
-        JOptionPane.showMessageDialog(null, "Hola");
+        OrdenProduccion Ord = new OrdenProduccion();
+        Ord.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnNuevaOPActionPerformed
 
     private void btnNuevaOPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevaOPMouseClicked
