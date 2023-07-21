@@ -879,19 +879,20 @@ public class Mantenimiento extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         OrdenProduccion yy=new OrdenProduccion();
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         Formulacion yy=new Formulacion();
+        
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         Mantenimiento yy=new Mantenimiento();
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void z11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_z11ActionPerformed
@@ -1006,19 +1007,20 @@ public class Mantenimiento extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void btncond6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond6ActionPerformed
-        // TODO add your handling code here:
+        agregar();
+        limpiar();
     }//GEN-LAST:event_btncond6ActionPerformed
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
        PantallaInicio t=new PantallaInicio();
         t.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
        PantallaInicio t=new PantallaInicio();
         t.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jLabel3MouseClicked
 
     /**

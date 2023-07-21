@@ -731,7 +731,9 @@ public class OrdenProduccion extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
-        
+        Mantenimiento t=new Mantenimiento();
+        t.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked

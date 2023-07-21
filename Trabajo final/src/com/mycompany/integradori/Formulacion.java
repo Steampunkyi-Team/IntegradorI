@@ -584,7 +584,7 @@ public class Formulacion extends javax.swing.JFrame {
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
         Mantenimiento yy=new Mantenimiento();
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
@@ -594,33 +594,33 @@ public class Formulacion extends javax.swing.JFrame {
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
         OrdenProduccion yy=new OrdenProduccion();
         yy.setVisible(true);
-        this.setVisible(false);
+       this.dispose();
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
         PantallaInicio yy=new PantallaInicio();
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
         
     }//GEN-LAST:event_jLabel3MouseClicked
 
     private void jPanel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel4MouseClicked
         PantallaInicio yy=new PantallaInicio();
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
         
     }//GEN-LAST:event_jPanel4MouseClicked
 
     private void jPanel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel8MouseClicked
         OrdenProduccion yy=new OrdenProduccion();
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jPanel8MouseClicked
 
     private void jPanel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel10MouseClicked
         Mantenimiento yy=new Mantenimiento();
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jPanel10MouseClicked
 
     /**

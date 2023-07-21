@@ -241,28 +241,28 @@ public class PantallaInicio extends javax.swing.JFrame {
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
         OrdenProduccion yy=new OrdenProduccion();
         yy.setVisible(true);
-                this.setVisible(false);
+        this.dispose();
 
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         Formulacion yy=new Formulacion();
         yy.setVisible(true);
-                this.setVisible(false);
+                this.dispose();
 
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
         Mantenimiento yy=new Mantenimiento();
         yy.setVisible(true);
-                this.setVisible(false);
+                this.dispose();
 
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
         OrdenProduccion yy=new OrdenProduccion();
         yy.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
@@ -272,7 +272,7 @@ public class PantallaInicio extends javax.swing.JFrame {
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
         Mantenimiento yy=new Mantenimiento();
         yy.setVisible(true);
-                this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jLabel12MouseClicked
 
     /**
