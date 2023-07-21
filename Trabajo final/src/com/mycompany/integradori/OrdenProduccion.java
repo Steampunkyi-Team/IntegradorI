@@ -13,6 +13,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -31,6 +33,24 @@ public class OrdenProduccion extends javax.swing.JFrame {
         initComponents();
         mostrar2("formula");
         mostrar("orden");
+        Thread hiloReloj = new Thread(() -> {
+        while (true) {
+            actualizarHoraYFecha();
+            try {
+                Thread.sleep(1000); // Actualizar cada segundo
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    });
+    hiloReloj.start();
+    }
+    private void actualizarHoraYFecha() {
+        SimpleDateFormat formatoHora = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+        Date horaActual = new Date();
+        lblHora.setText(formatoHora.format(horaActual));
+        lblFecha.setText(formatoFecha.format(horaActual));
     }
     public void mostrar(String tabla){
         String sql="select*from "+tabla;
@@ -137,7 +157,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         cantidad = new javax.swing.JSpinner();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         insumo5txt = new javax.swing.JTextField();
         insumo1txt = new javax.swing.JTextField();
@@ -173,6 +192,8 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         jLabel20 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        lblFecha = new javax.swing.JLabel();
+        lblHora = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -321,7 +342,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(187, 184, 193));
         jLabel6.setText("Nº OP");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 80, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 130, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(187, 184, 193));
@@ -335,11 +356,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(187, 184, 193));
         jLabel10.setText("Código");
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, -1, 37));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("09:24 a.m.");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 20, -1, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel12.setText("08/07/2023");
@@ -480,7 +496,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(tbl);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, 430, 140));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, 430, 140));
 
         idtxt.setBackground(new java.awt.Color(45, 43, 57));
         idtxt.setForeground(new java.awt.Color(255, 255, 255));
@@ -516,7 +532,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
                 consultarbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(consultarbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 130, 100, 40));
+        jPanel2.add(consultarbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 170, 100, 40));
 
         calcularbtn.setBackground(new java.awt.Color(47, 44, 57));
         calcularbtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -534,7 +550,7 @@ public class OrdenProduccion extends javax.swing.JFrame {
         noftxt.setForeground(new java.awt.Color(255, 255, 255));
         noftxt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         noftxt.setBorder(null);
-        jPanel2.add(noftxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 80, 310, 32));
+        jPanel2.add(noftxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 130, 310, 32));
 
         guardarbtn.setBackground(new java.awt.Color(47, 44, 57));
         guardarbtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -590,6 +606,14 @@ public class OrdenProduccion extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(187, 184, 193));
         jLabel1.setText("Datos de Formula");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 180, 160, 30));
+
+        lblFecha.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblFecha.setForeground(new java.awt.Color(187, 184, 193));
+        jPanel2.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 140, 30));
+
+        lblHora.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblHora.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 150, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 900, 650));
 
@@ -766,7 +790,6 @@ public class OrdenProduccion extends javax.swing.JFrame {
     public javax.swing.JTextField insumo5txt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -790,6 +813,8 @@ public class OrdenProduccion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane5;
+    public javax.swing.JLabel lblFecha;
+    public javax.swing.JLabel lblHora;
     public javax.swing.JTextField noftxt;
     public javax.swing.JTextField productotxt;
     public javax.swing.JTable tbl;

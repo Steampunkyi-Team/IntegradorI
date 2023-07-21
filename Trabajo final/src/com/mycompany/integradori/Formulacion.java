@@ -13,6 +13,8 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -28,6 +30,24 @@ public class Formulacion extends javax.swing.JFrame {
     public Formulacion() {
         initComponents();
         mostrar("formula");
+        Thread hiloReloj = new Thread(() -> {
+        while (true) {
+            actualizarHoraYFecha();
+            try {
+                Thread.sleep(1000); // Actualizar cada segundo
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    });
+    hiloReloj.start();
+    }
+    private void actualizarHoraYFecha() {
+        SimpleDateFormat formatoHora = new SimpleDateFormat("HH:mm:ss");
+        SimpleDateFormat formatoFecha = new SimpleDateFormat("dd/MM/yyyy");
+        Date horaActual = new Date();
+        lblHora.setText(formatoHora.format(horaActual));
+        lblFecha.setText(formatoFecha.format(horaActual));
     }
     public void mostrar(String tabla){
         String sql="select*from "+tabla;
@@ -87,8 +107,6 @@ public class Formulacion extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbl = new javax.swing.JTable();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
         guardarbtn = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         codigotxt = new javax.swing.JTextField();
@@ -110,6 +128,8 @@ public class Formulacion extends javax.swing.JFrame {
         productotxt = new javax.swing.JTextField();
         idtxt = new javax.swing.JTextField();
         report = new javax.swing.JToggleButton();
+        lblFecha = new javax.swing.JLabel();
+        lblHora = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
@@ -155,16 +175,6 @@ public class Formulacion extends javax.swing.JFrame {
         jScrollPane1.setViewportView(tbl);
 
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 580, 270));
-
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("09:24 A.M.");
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 20, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel12.setText("08/07/2023");
-        jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 50, -1, -1));
 
         guardarbtn.setBackground(new java.awt.Color(47, 44, 57));
         guardarbtn.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -359,6 +369,14 @@ public class Formulacion extends javax.swing.JFrame {
             }
         });
         jPanel2.add(report, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 510, 169, 44));
+
+        lblFecha.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        lblFecha.setForeground(new java.awt.Color(187, 184, 193));
+        jPanel2.add(lblFecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 60, 140, 30));
+
+        lblHora.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
+        lblHora.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.add(lblHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 150, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 900, 650));
 
@@ -588,8 +606,6 @@ public class Formulacion extends javax.swing.JFrame {
     public javax.swing.JTextField insumo3txt;
     public javax.swing.JTextField insumo4txt;
     public javax.swing.JTextField insumo5txt;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -606,6 +622,8 @@ public class Formulacion extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JLabel lblFecha;
+    public javax.swing.JLabel lblHora;
     public javax.swing.JButton modificarbtn;
     public javax.swing.JTextField productotxt;
     public javax.swing.JToggleButton report;
