@@ -5,6 +5,8 @@
 package com.mycompany.integradori;
 
 import Controlador.OrdenControlador;
+import Controlador.FormulaControlador;
+import Modelo.FormulacionDao;
 import Modelo.conexion;
 import Modelo.orden;
 import Modelo.ordenDao;
@@ -738,8 +740,8 @@ public class OrdenProduccion extends javax.swing.JFrame {
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         Formulacion t=new Formulacion();
-        
-        t.setVisible(true);
+        FormulaControlador ctrl=new FormulaControlador(t);
+        ctrl.iniciar();
         this.setVisible(false);
     }//GEN-LAST:event_jLabel8MouseClicked
 
@@ -757,7 +759,8 @@ public class OrdenProduccion extends javax.swing.JFrame {
 
     private void jPanel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel7MouseClicked
         Formulacion t=new Formulacion();
-        t.setVisible(true);
+        FormulaControlador ctrl=new FormulaControlador(t);
+        ctrl.iniciar();
         this.setVisible(false);
     }//GEN-LAST:event_jPanel7MouseClicked
 

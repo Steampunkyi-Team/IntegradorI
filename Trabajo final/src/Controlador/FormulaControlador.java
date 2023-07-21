@@ -191,6 +191,9 @@ public class FormulaControlador implements ActionListener {
         vista.cantidad4txt.setText(null);
         vista.cantidad5txt.setText(null);
     }
+    public void iniciar(){
+        vista.setVisible(true);
+    }
     /*public void limpiarTabla(){
         for(int i=0;i<vista.tbl.getRowCount();i++){
             modelo.removeRow(i);

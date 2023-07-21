@@ -1,5 +1,6 @@
 package com.mycompany.integradori;
 
+import Controlador.FormulaControlador;
 import Modelo.condicionMant;
 import Modelo.condicionMantDAO;
 import Modelo.ordenDao;
@@ -883,10 +884,10 @@ public class Mantenimiento extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-        Formulacion yy=new Formulacion();
-        
-        yy.setVisible(true);
-        this.dispose();
+        Formulacion t=new Formulacion();
+        FormulaControlador ctrl=new FormulaControlador(t);
+        ctrl.iniciar();
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
