@@ -4,6 +4,19 @@
  */
 package com.mycompany.integradori;
 
+import Export.ExportarExcel;
+import Modelo.condicionMant;
+import Modelo.condicionMantDAO;
+import Modelo.ordenDao;
+import Modelo.zona;
+import Modelo.zonaDao;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author vcc036
@@ -13,10 +26,66 @@ public class ReporteMant extends javax.swing.JFrame {
     /**
      * Creates new form ReporteMant
      */
+    
+    condicionMantDAO dao = new condicionMantDAO();
+    condicionMant o = new condicionMant();
+    ordenDao dd = new ordenDao();
+    zonaDao d=new zonaDao();
+    zona a=new zona();
+    DefaultTableModel modelo = new DefaultTableModel();
+    private int idCondicionMant;
+    private int idZona;
+    
     public ReporteMant() {
         initComponents();
+        listar();
+        listar2();
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
     }
 
+    void listar() {
+        @SuppressWarnings("unchecked")
+        List<condicionMant> lista = dao.listar();
+        //List<? extends condicionMant> lista = new ArrayList<>(dao.listar());
+        modelo = (DefaultTableModel) jTable2.getModel();
+        Object[] ob = new Object[7];
+        for (int i = 0; i < lista.size(); i++) {
+            ob[0] = lista.get(i).getIdCondicionMant();
+            ob[1] = lista.get(i).getTolvaRPM();
+            ob[2] = lista.get(i).getTornilloRPM();
+            ob[3] = lista.get(i).getPresion();
+            ob[4] = lista.get(i).getAmperaje();
+            ob[5] = lista.get(i).getVacio();
+            ob[6] = lista.get(i).getRendimiento();
+            modelo.addRow(ob);
+        }
+        jTable2.setModel(modelo);
+    }
+    void listar2() {
+        @SuppressWarnings("unchecked")
+        List<zona> lista = d.listar();
+        //List<? extends condicionMant> lista = new ArrayList<>(dao.listar());
+        modelo = (DefaultTableModel) jTable1.getModel();
+        Object[] ob = new Object[13];
+        for (int i = 0; i < lista.size(); i++) {
+            ob[0] = lista.get(i).getIdzonas();
+            ob[1] = lista.get(i).getZ1();
+            ob[2] = lista.get(i).getZ2();
+            ob[3] = lista.get(i).getZ3();
+            ob[4] = lista.get(i).getZ4();
+            ob[5] = lista.get(i).getZ5();
+            ob[6] = lista.get(i).getZ6();
+            ob[7] = lista.get(i).getZ7();
+            ob[8] = lista.get(i).getZ8();
+            ob[9] = lista.get(i).getZ9();
+            ob[10] = lista.get(i).getZ10();
+            ob[11] = lista.get(i).getZ11();
+            ob[12] = lista.get(i).getZ12();
+            modelo.addRow(ob);
+        }
+        jTable1.setModel(modelo);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -27,27 +96,126 @@ public class ReporteMant extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(26, 22, 31));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 640, Short.MAX_VALUE)
-        );
+        jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 40)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel1.setText("REPORTE DE MANTENIMIENTO");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 640));
+        jTable2.setBackground(new java.awt.Color(153, 153, 153));
+        jTable2.setForeground(new java.awt.Color(255, 255, 255));
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Tolva RPM", "Tornillo RPM", "Presion", "Amperaje", "Vacio", "Rendimiento"
+            }
+        ));
+        jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable2MouseClicked(evt);
+            }
+        });
+        jScrollPane2.setViewportView(jTable2);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, 710, 150));
+
+        jTable1.setBackground(new java.awt.Color(153, 153, 153));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Z1", "Z2", "Z3", "Z4", "Z5", "Z6", "Z7", "Z8", "Z9", "Z10", "Z11", "Z12"
+            }
+        ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(jTable1);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, 710, 150));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton1.setText("EXPORTAR A EXCEL");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 580, -1, -1));
+
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jButton2.setText("EXPORTAR A EXCEL");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel2.setText("Temperaturas");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel3.setText("Condiciones de la extrusora");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 640));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTable2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable2MouseClicked
+
+    }//GEN-LAST:event_jTable2MouseClicked
+
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        
+    }//GEN-LAST:event_jTable1MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        ExportarExcel obj;
+        
+        try {
+            obj = new ExportarExcel();
+            obj.exportarExcel(jTable2);
+        } catch (IOException ex){
+            System.out.println("Error: " + ex);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ExportarExcel obj;
+        
+        try {
+            obj = new ExportarExcel();
+            obj.exportarExcel(jTable1);
+        } catch (IOException ex){
+            System.out.println("Error: " + ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -85,6 +253,15 @@ public class ReporteMant extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    public javax.swing.JScrollPane jScrollPane1;
+    public javax.swing.JScrollPane jScrollPane2;
+    public javax.swing.JTable jTable1;
+    public javax.swing.JTable jTable2;
     // End of variables declaration//GEN-END:variables
 }

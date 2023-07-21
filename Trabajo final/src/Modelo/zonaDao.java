@@ -22,7 +22,7 @@ public class zonaDao {
     
     public List listar() {
         List<zona>datos=new ArrayList<>();
-        String sql="select*from zonas order by Idzonas desc limit 2";
+        String sql="select*from zonas order by Idzonas desc limit 10";
         try {
             con=conectar.getConnection();
             ps=con.prepareStatement(sql);
