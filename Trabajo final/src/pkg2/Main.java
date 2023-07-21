@@ -1,3 +1,4 @@
+
 package pkg2;
 
 import com.mycompany.integradori.Inicio;
@@ -9,5 +10,4 @@ public class Main {
         login.setVisible(true);
         login.setLocationRelativeTo(null);
     }
-    
 }

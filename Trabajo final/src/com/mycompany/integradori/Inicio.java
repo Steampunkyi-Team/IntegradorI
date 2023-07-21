@@ -25,6 +25,7 @@ public class Inicio extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
+
         btnInicio = new javax.swing.JButton();
         txtUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
@@ -42,16 +43,27 @@ public class Inicio extends javax.swing.JFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
+        jButton1 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 500));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 625));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/Recurso 1 (Custom).png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(246, 70, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(34, 24, 76));
         jPanel2.setToolTipText("");
+
 
         btnInicio.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnInicio.setText("INICIO");
@@ -159,6 +171,25 @@ public class Inicio extends javax.swing.JFrame {
                 .addContainerGap(125, Short.MAX_VALUE))
         );
 
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setText("INICIO");
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 129, 36));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 540, 40));
+        jPanel2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 540, 40));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/logo2.png"))); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 630, 290));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel2.setText("¿Olvidó su contraseña?");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, -1, -1));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 60, 781, 430));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -179,8 +210,7 @@ public class Inicio extends javax.swing.JFrame {
             //IngresoG = Ingreso del gerente 
             this.dispose();
         }else if(usuario.equals("Operario") && password.equals("4321")){
-            Pesado IngresoO = new Pesado();
-            IngresoO.setVisible(true);
+            
             this.dispose();
         }
         else{
@@ -199,12 +229,17 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton btnInicio;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
+
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPasswordField txtContra;
     private javax.swing.JTextField txtUsuario;
+
+    private javax.swing.JLabel jLabel2;
+
+
     // End of variables declaration//GEN-END:variables
 
 }
