@@ -138,6 +138,11 @@ public class PantallaInicio extends javax.swing.JFrame {
         jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, 30));
 
         jPanel3.setBackground(new java.awt.Color(31, 30, 36));
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
@@ -146,6 +151,11 @@ public class PantallaInicio extends javax.swing.JFrame {
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, 20));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/nuevo.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 120, -1));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 170, 180));
@@ -242,6 +252,18 @@ public class PantallaInicio extends javax.swing.JFrame {
         Mantenimiento yy=new Mantenimiento();
         yy.setVisible(true);
     }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        OrdenProduccion Nuevo = new OrdenProduccion();
+        Nuevo.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jPanel3MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+        OrdenProduccion Nuevo = new OrdenProduccion();
+        Nuevo.setVisible(true);
+        this.dispose();        
+    }//GEN-LAST:event_jLabel7MouseClicked
 
     /**
      * @param args the command line arguments
