@@ -14,7 +14,7 @@ public class condicionMantDAO {
     
     public List listar() {
         List<condicionMant>datos=new ArrayList<>();
-        String sql="select*from condicionmant order by IdCondicionMant desc limit 2";
+        String sql="select*from condicionmant order by IdCondicionMant desc limit 10";
         try {
             con=conectar.getConnection();
             ps=con.prepareStatement(sql);

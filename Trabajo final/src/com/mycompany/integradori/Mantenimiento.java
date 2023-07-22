@@ -33,6 +33,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         listar();
         listar2();
         
+             
         Thread hiloReloj = new Thread(() -> {
         while (true) {
             actualizarHoraYFecha();
@@ -322,7 +323,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         txtRendimiento = new javax.swing.JTextField();
         btncond4 = new javax.swing.JButton();
         btncond5 = new javax.swing.JButton();
-        btncond2 = new javax.swing.JButton();
         btncond = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
@@ -689,15 +689,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         });
         jPanel2.add(btncond5, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 490, 100, 40));
 
-        btncond2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        btncond2.setText("Aceptar");
-        btncond2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btncond2ActionPerformed(evt);
-            }
-        });
-        jPanel2.add(btncond2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 590, 120, 40));
-
         btncond.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
         btncond.setText("Reporte");
         btncond.addActionListener(new java.awt.event.ActionListener() {
@@ -705,7 +696,7 @@ public class Mantenimiento extends javax.swing.JFrame {
                 btncondActionPerformed(evt);
             }
         });
-        jPanel2.add(btncond, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 590, 120, 40));
+        jPanel2.add(btncond, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 590, 120, 40));
 
         jTable1.setBackground(new java.awt.Color(153, 153, 153));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -930,12 +921,9 @@ public class Mantenimiento extends javax.swing.JFrame {
         limpiar2();
     }//GEN-LAST:event_btncond5ActionPerformed
 
-    private void btncond2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btncond2ActionPerformed
-
     private void btncondActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncondActionPerformed
-        // TODO add your handling code here:
+       ReporteMant reporteMant = new ReporteMant();
+        reporteMant.setVisible(true);
     }//GEN-LAST:event_btncondActionPerformed
 
     private void z8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_z8ActionPerformed
@@ -1088,7 +1076,6 @@ public class Mantenimiento extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btncond;
     public javax.swing.JButton btncond1;
-    public javax.swing.JButton btncond2;
     public javax.swing.JButton btncond3;
     public javax.swing.JButton btncond4;
     public javax.swing.JButton btncond5;
