@@ -345,7 +345,6 @@ public class Mantenimiento extends javax.swing.JFrame {
         btncond6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(37, 32, 47));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

@@ -36,10 +36,10 @@ public class Inicio extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtContra = new javax.swing.JPasswordField();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setMinimumSize(new java.awt.Dimension(950, 520));
+        setPreferredSize(new java.awt.Dimension(863, 520));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
@@ -77,11 +77,7 @@ public class Inicio extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 630, 290));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel2.setText("¿Olvidó su contraseña?");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 350, -1, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 60, 781, 430));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 60, 781, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -90,9 +86,9 @@ public class Inicio extends javax.swing.JFrame {
         String usuario = txtUsuario.getText();
         String password = String.valueOf(txtContra.getPassword());
         if(usuario.equals("Gerente") && password.equals("1234")){
-            Formulacion t = new Formulacion();
-            FormulaControlador ctrl = new FormulaControlador(t);
-            ctrl.iniciar();
+            PantallaInicio t = new PantallaInicio();
+            t.setVisible(true);
+            this.dispose();
         this.setVisible(false);
         }else if(usuario.equals("Operario") && password.equals("4321")){
             Mantenimiento IngresoO = new Mantenimiento();
@@ -153,7 +149,6 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;

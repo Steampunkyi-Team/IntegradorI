@@ -87,8 +87,6 @@ public class PantallaInicio extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
         txtMostrarOrden = new javax.swing.JLabel();
         txtMostrarNombre = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -97,7 +95,6 @@ public class PantallaInicio extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1150, 660));
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(37, 32, 47));
@@ -247,14 +244,6 @@ public class PantallaInicio extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(187, 184, 193));
         jLabel17.setText("Nº de Id");
         jPanel6.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 80, -1));
-
-        jLabel18.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel18.setText("Aquí va el número de la orden de prod.");
-        jPanel6.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, -1, -1));
-
-        jLabel19.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel19.setText("Aquí va id del Producto");
-        jPanel6.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, -1, -1));
 
         txtMostrarOrden.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
         txtMostrarOrden.setForeground(new java.awt.Color(255, 255, 255));
@@ -429,8 +418,6 @@ public class PantallaInicio extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
