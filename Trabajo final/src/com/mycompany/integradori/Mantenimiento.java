@@ -580,13 +580,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 410, -1, -1));
 
         z12.setBackground(new java.awt.Color(47, 44, 57));
-        z12.setForeground(new java.awt.Color(204, 204, 204));
+        z12.setForeground(new java.awt.Color(255, 255, 255));
         z12.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z12.setBorder(null);
         jPanel2.add(z12, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 50, 30));
 
         z11.setBackground(new java.awt.Color(47, 44, 57));
-        z11.setForeground(new java.awt.Color(204, 204, 204));
+        z11.setForeground(new java.awt.Color(255, 255, 255));
         z11.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z11.setBorder(null);
         z11.addActionListener(new java.awt.event.ActionListener() {
@@ -597,7 +597,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(z11, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 440, 50, 30));
 
         txtVacio.setBackground(new java.awt.Color(47, 44, 57));
-        txtVacio.setForeground(new java.awt.Color(204, 204, 204));
+        txtVacio.setForeground(new java.awt.Color(255, 255, 255));
         txtVacio.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtVacio.setBorder(null);
         txtVacio.addActionListener(new java.awt.event.ActionListener() {
@@ -608,13 +608,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(txtVacio, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 260, 90, 30));
 
         z7.setBackground(new java.awt.Color(47, 44, 57));
-        z7.setForeground(new java.awt.Color(204, 204, 204));
+        z7.setForeground(new java.awt.Color(255, 255, 255));
         z7.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z7.setBorder(null);
         jPanel2.add(z7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 440, 50, 30));
 
         txtAmperaje.setBackground(new java.awt.Color(47, 44, 57));
-        txtAmperaje.setForeground(new java.awt.Color(204, 204, 204));
+        txtAmperaje.setForeground(new java.awt.Color(255, 255, 255));
         txtAmperaje.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtAmperaje.setBorder(null);
         jPanel2.add(txtAmperaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 260, 90, 30));
@@ -661,7 +661,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 710, 60));
 
         txtRendimiento.setBackground(new java.awt.Color(47, 44, 57));
-        txtRendimiento.setForeground(new java.awt.Color(204, 204, 204));
+        txtRendimiento.setForeground(new java.awt.Color(255, 255, 255));
         txtRendimiento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtRendimiento.setBorder(null);
         jPanel2.add(txtRendimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, 90, 30));
@@ -716,24 +716,25 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 710, 60));
 
         jTextField20.setBackground(new java.awt.Color(47, 44, 57));
+        jTextField20.setForeground(new java.awt.Color(255, 255, 255));
         jTextField20.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField20.setBorder(null);
         jPanel2.add(jTextField20, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 440, 50, 30));
 
         z10.setBackground(new java.awt.Color(47, 44, 57));
-        z10.setForeground(new java.awt.Color(204, 204, 204));
+        z10.setForeground(new java.awt.Color(255, 255, 255));
         z10.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z10.setBorder(null);
         jPanel2.add(z10, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 440, 50, 30));
 
         z9.setBackground(new java.awt.Color(47, 44, 57));
-        z9.setForeground(new java.awt.Color(204, 204, 204));
+        z9.setForeground(new java.awt.Color(255, 255, 255));
         z9.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z9.setBorder(null);
         jPanel2.add(z9, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 440, 50, 30));
 
         z8.setBackground(new java.awt.Color(47, 44, 57));
-        z8.setForeground(new java.awt.Color(204, 204, 204));
+        z8.setForeground(new java.awt.Color(255, 255, 255));
         z8.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z8.setBorder(null);
         z8.addActionListener(new java.awt.event.ActionListener() {
@@ -744,13 +745,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(z8, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 440, 50, 30));
 
         z6.setBackground(new java.awt.Color(47, 44, 57));
-        z6.setForeground(new java.awt.Color(204, 204, 204));
+        z6.setForeground(new java.awt.Color(255, 255, 255));
         z6.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z6.setBorder(null);
         jPanel2.add(z6, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 440, 50, 30));
 
         z5.setBackground(new java.awt.Color(47, 44, 57));
-        z5.setForeground(new java.awt.Color(204, 204, 204));
+        z5.setForeground(new java.awt.Color(255, 255, 255));
         z5.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z5.setBorder(null);
         z5.addActionListener(new java.awt.event.ActionListener() {
@@ -761,19 +762,19 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(z5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 440, 50, 30));
 
         z4.setBackground(new java.awt.Color(47, 44, 57));
-        z4.setForeground(new java.awt.Color(204, 204, 204));
+        z4.setForeground(new java.awt.Color(255, 255, 255));
         z4.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z4.setBorder(null);
         jPanel2.add(z4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 50, 30));
 
         z3.setBackground(new java.awt.Color(47, 44, 57));
-        z3.setForeground(new java.awt.Color(204, 204, 204));
+        z3.setForeground(new java.awt.Color(255, 255, 255));
         z3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z3.setBorder(null);
         jPanel2.add(z3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, 50, 30));
 
         z2.setBackground(new java.awt.Color(47, 44, 57));
-        z2.setForeground(new java.awt.Color(204, 204, 204));
+        z2.setForeground(new java.awt.Color(255, 255, 255));
         z2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z2.setBorder(null);
         z2.addActionListener(new java.awt.event.ActionListener() {
@@ -784,13 +785,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(z2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 440, 50, 30));
 
         z1.setBackground(new java.awt.Color(47, 44, 57));
-        z1.setForeground(new java.awt.Color(204, 204, 204));
+        z1.setForeground(new java.awt.Color(255, 255, 255));
         z1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         z1.setBorder(null);
         jPanel2.add(z1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 440, 50, 30));
 
         txtTolvaRPM.setBackground(new java.awt.Color(47, 44, 57));
-        txtTolvaRPM.setForeground(new java.awt.Color(204, 204, 204));
+        txtTolvaRPM.setForeground(new java.awt.Color(255, 255, 255));
         txtTolvaRPM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTolvaRPM.setBorder(null);
         txtTolvaRPM.addActionListener(new java.awt.event.ActionListener() {
@@ -801,7 +802,7 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(txtTolvaRPM, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 90, 30));
 
         txtTornilloRPM.setBackground(new java.awt.Color(47, 44, 57));
-        txtTornilloRPM.setForeground(new java.awt.Color(204, 204, 204));
+        txtTornilloRPM.setForeground(new java.awt.Color(255, 255, 255));
         txtTornilloRPM.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtTornilloRPM.setBorder(null);
         txtTornilloRPM.addActionListener(new java.awt.event.ActionListener() {
@@ -812,12 +813,13 @@ public class Mantenimiento extends javax.swing.JFrame {
         jPanel2.add(txtTornilloRPM, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 260, 90, 30));
 
         txtPresion.setBackground(new java.awt.Color(47, 44, 57));
-        txtPresion.setForeground(new java.awt.Color(204, 204, 204));
+        txtPresion.setForeground(new java.awt.Color(255, 255, 255));
         txtPresion.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtPresion.setBorder(null);
         jPanel2.add(txtPresion, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 90, 30));
 
         jComboBox1.setBackground(new java.awt.Color(47, 44, 57));
+        jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar...", "Juan Perez", "Luis Ordoñez", "Mario Garrala", "Pedro Dominguez", "Miguel Juarez", "Daniel Valencia" }));
         jComboBox1.setToolTipText("");
         jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 142, 280, 30));
