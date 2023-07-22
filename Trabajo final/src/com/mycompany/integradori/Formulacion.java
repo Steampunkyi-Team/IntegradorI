@@ -150,7 +150,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(134, 83, 140));
-        jLabel5.setText("Fórmula");
+        jLabel5.setText("Formulación");
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -428,7 +428,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(193, 117, 121));
-        jLabel8.setText("Fórmula");
+        jLabel8.setText("Formulación");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -443,7 +443,7 @@ public class Formulacion extends javax.swing.JFrame {
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(62, 62, 62)
                 .addComponent(jLabel8)
-                .addContainerGap(95, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -453,7 +453,7 @@ public class Formulacion extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, -1));
+        jPanel1.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
 
         jPanel8.setBackground(new java.awt.Color(37, 32, 47));
         jPanel8.setPreferredSize(new java.awt.Dimension(226, 45));
@@ -465,7 +465,7 @@ public class Formulacion extends javax.swing.JFrame {
 
         jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel17.setText("Registro");
+        jLabel17.setText("Produccion");
         jLabel17.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jLabel17.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -480,7 +480,7 @@ public class Formulacion extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(63, 63, 63)
                 .addComponent(jLabel17)
-                .addContainerGap(92, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -490,7 +490,7 @@ public class Formulacion extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, -1, -1));
+        jPanel1.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(37, 32, 47));
         jPanel4.setPreferredSize(new java.awt.Dimension(226, 45));

@@ -126,7 +126,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c1" green="b8" red="bb" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Registro"/>
+            <Property name="text" type="java.lang.String" value="Producci&#xf3;n"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor Por defecto"/>
             </Property>
@@ -148,7 +148,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="c1" green="b8" red="bb" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="F&#xf3;rmula"/>
+            <Property name="text" type="java.lang.String" value="Formulaci&#xf3;n"/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
               <Color id="Cursor Por defecto"/>
             </Property>
@@ -917,13 +917,13 @@
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="7" rowCount="0">
-                    <Column editable="true" title="ID" type="java.lang.Object"/>
-                    <Column editable="true" title="Tolva RPM" type="java.lang.Object"/>
-                    <Column editable="true" title="Tornillo RPM" type="java.lang.Object"/>
-                    <Column editable="true" title="Presion" type="java.lang.Object"/>
-                    <Column editable="true" title="Amperaje" type="java.lang.Object"/>
-                    <Column editable="true" title="Vacio" type="java.lang.Object"/>
-                    <Column editable="true" title="Rendimiento" type="java.lang.Object"/>
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
+                    <Column editable="false" title="Tolva RPM" type="java.lang.Object"/>
+                    <Column editable="false" title="Tornillo RPM" type="java.lang.Object"/>
+                    <Column editable="false" title="Presion" type="java.lang.Object"/>
+                    <Column editable="false" title="Amperaje" type="java.lang.Object"/>
+                    <Column editable="false" title="Vacio" type="java.lang.Object"/>
+                    <Column editable="false" title="Rendimiento" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
@@ -1089,19 +1089,19 @@
                 </Property>
                 <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
                   <Table columnCount="13" rowCount="0">
-                    <Column editable="true" title="ID" type="java.lang.Object"/>
-                    <Column editable="true" title="Z1" type="java.lang.Object"/>
-                    <Column editable="true" title="Z2" type="java.lang.Object"/>
-                    <Column editable="true" title="Z3" type="java.lang.Object"/>
-                    <Column editable="true" title="Z4" type="java.lang.Object"/>
-                    <Column editable="true" title="Z5" type="java.lang.Object"/>
-                    <Column editable="true" title="Z6" type="java.lang.Object"/>
-                    <Column editable="true" title="Z7" type="java.lang.Object"/>
-                    <Column editable="true" title="Z8" type="java.lang.Object"/>
-                    <Column editable="true" title="Z9" type="java.lang.Object"/>
-                    <Column editable="true" title="Z10" type="java.lang.Object"/>
-                    <Column editable="true" title="Z11" type="java.lang.Object"/>
-                    <Column editable="true" title="Z12" type="java.lang.Object"/>
+                    <Column editable="false" title="ID" type="java.lang.Object"/>
+                    <Column editable="false" title="Z1" type="java.lang.Object"/>
+                    <Column editable="false" title="Z2" type="java.lang.Object"/>
+                    <Column editable="false" title="Z3" type="java.lang.Object"/>
+                    <Column editable="false" title="Z4" type="java.lang.Object"/>
+                    <Column editable="false" title="Z5" type="java.lang.Object"/>
+                    <Column editable="false" title="Z6" type="java.lang.Object"/>
+                    <Column editable="false" title="Z7" type="java.lang.Object"/>
+                    <Column editable="false" title="Z8" type="java.lang.Object"/>
+                    <Column editable="false" title="Z9" type="java.lang.Object"/>
+                    <Column editable="false" title="Z10" type="java.lang.Object"/>
+                    <Column editable="false" title="Z11" type="java.lang.Object"/>
+                    <Column editable="false" title="Z12" type="java.lang.Object"/>
                   </Table>
                 </Property>
                 <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
