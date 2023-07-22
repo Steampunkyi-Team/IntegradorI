@@ -329,9 +329,10 @@ public class PantallaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
-        Formulacion e=new Formulacion();
-        e.setVisible(true);
-        this.dispose();
+        Formulacion t=new Formulacion();
+        FormulaControlador ctrl=new FormulaControlador(t);
+        ctrl.iniciar();
+        this.setVisible(false);
     }//GEN-LAST:event_jLabel9MouseClicked
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked

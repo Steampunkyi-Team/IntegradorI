@@ -4,6 +4,7 @@
  */
 package com.mycompany.integradori;
 
+import Controlador.FormulaControlador;
 import javax.swing.JOptionPane;
 
 /**
@@ -89,10 +90,10 @@ public class Inicio extends javax.swing.JFrame {
         String usuario = txtUsuario.getText();
         String password = String.valueOf(txtContra.getPassword());
         if(usuario.equals("Gerente") && password.equals("1234")){
-            Formulacion IngresoG = new Formulacion();
-            IngresoG.setVisible(true);
-            //IngresoG = Ingreso del gerente 
-            this.dispose();
+            Formulacion t = new Formulacion();
+            FormulaControlador ctrl = new FormulaControlador(t);
+            ctrl.iniciar();
+        this.setVisible(false);
         }else if(usuario.equals("Operario") && password.equals("4321")){
             Mantenimiento IngresoO = new Mantenimiento();
             IngresoO.setVisible(true);
