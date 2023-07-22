@@ -4,6 +4,9 @@
  */
 package com.mycompany.integradori;
 
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author vcc036
@@ -26,6 +29,7 @@ public class PantallaInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnNuevaOP1 = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -38,14 +42,14 @@ public class PantallaInicio extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel14 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        btnNuevaOP = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
+        btnBuscarOP = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
+        btnMant = new javax.swing.JButton();
         jPanel6 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
@@ -56,9 +60,23 @@ public class PantallaInicio extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jPanel7 = new javax.swing.JPanel();
 
+        btnNuevaOP1.setBackground(new java.awt.Color(102, 0, 102));
+        btnNuevaOP1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnNuevaOP1.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevaOP1.setText("Nueva OP");
+        btnNuevaOP1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnNuevaOP1MouseClicked(evt);
+            }
+        });
+        btnNuevaOP1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevaOP1ActionPerformed(evt);
+            }
+        });
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1150, 660));
-        setPreferredSize(new java.awt.Dimension(1150, 690));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(37, 32, 47));
@@ -145,11 +163,6 @@ public class PantallaInicio extends javax.swing.JFrame {
         });
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel2.setText("Nueva OP");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, 20));
-
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/nuevo.png"))); // NOI18N
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -158,18 +171,40 @@ public class PantallaInicio extends javax.swing.JFrame {
         });
         jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 120, -1));
 
+        btnNuevaOP.setBackground(new java.awt.Color(102, 0, 102));
+        btnNuevaOP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnNuevaOP.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevaOP.setText("Nueva OP");
+        btnNuevaOP.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnNuevaOPMouseClicked(evt);
+            }
+        });
+        btnNuevaOP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevaOPActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnNuevaOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
+
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 170, 180));
 
         jPanel4.setBackground(new java.awt.Color(31, 30, 36));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel11.setText("Buscar OP");
-        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, -1, 20));
-
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/edit.png"))); // NOI18N
         jPanel4.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+
+        btnBuscarOP.setBackground(new java.awt.Color(102, 0, 102));
+        btnBuscarOP.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnBuscarOP.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarOP.setText("Buscar OP");
+        btnBuscarOP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarOPActionPerformed(evt);
+            }
+        });
+        jPanel4.add(btnBuscarOP, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, -1, -1));
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 110, 180, 180));
 
@@ -179,10 +214,16 @@ public class PantallaInicio extends javax.swing.JFrame {
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/imagen/settings.png"))); // NOI18N
         jPanel5.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 20)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(187, 184, 193));
-        jLabel13.setText("Mantenimiento");
-        jPanel5.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 20));
+        btnMant.setBackground(new java.awt.Color(102, 0, 102));
+        btnMant.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnMant.setForeground(new java.awt.Color(255, 255, 255));
+        btnMant.setText("Mantenimiento");
+        btnMant.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMantActionPerformed(evt);
+            }
+        });
+        jPanel5.add(btnMant, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
         jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, 180, 180));
 
@@ -254,20 +295,44 @@ public class PantallaInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
-        OrdenProduccion Nuevo = new OrdenProduccion();
-        Nuevo.setVisible(true);
-        this.dispose();
+        
     }//GEN-LAST:event_jPanel3MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        OrdenProduccion Nuevo = new OrdenProduccion();
-        Nuevo.setVisible(true);
-        this.dispose();        
+             
     }//GEN-LAST:event_jLabel7MouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnMantActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMantActionPerformed
+        Mantenimiento Man = new Mantenimiento();
+        Man.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnMantActionPerformed
+
+    private void btnBuscarOPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarOPActionPerformed
+        Formulacion For = new Formulacion();
+        For.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnBuscarOPActionPerformed
+
+    private void btnNuevaOPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaOPActionPerformed
+        OrdenProduccion Ord = new OrdenProduccion();
+        Ord.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnNuevaOPActionPerformed
+
+    private void btnNuevaOPMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevaOPMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNuevaOPMouseClicked
+
+    private void btnNuevaOP1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnNuevaOP1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNuevaOP1MouseClicked
+
+    private void btnNuevaOP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevaOP1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnNuevaOP1ActionPerformed
+ 
+   
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -304,18 +369,19 @@ public class PantallaInicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBuscarOP;
+    private javax.swing.JButton btnMant;
+    private javax.swing.JButton btnNuevaOP;
+    private javax.swing.JButton btnNuevaOP1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
