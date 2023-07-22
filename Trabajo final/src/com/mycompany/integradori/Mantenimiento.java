@@ -985,7 +985,8 @@ public class Mantenimiento extends javax.swing.JFrame {
     }//GEN-LAST:event_jTable1MouseClicked
 
     private void btncond6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btncond6ActionPerformed
-        // TODO add your handling code here:
+        agregar();
+        limpiar();
     }//GEN-LAST:event_btncond6ActionPerformed
 
     /**
