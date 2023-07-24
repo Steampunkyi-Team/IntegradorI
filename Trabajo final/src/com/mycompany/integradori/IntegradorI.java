@@ -4,13 +4,10 @@
 
 package com.mycompany.integradori;
 
-/**
- *
- * @author Steampunkyi
- */
 public class IntegradorI {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
     }
-}
+
+}   
